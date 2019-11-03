@@ -1,0 +1,28 @@
+import React from "react";
+import styled from "styled-components";
+import Text from "../../atoms/text";
+
+function homeHeader() {
+  return (
+    <HomeHeaderWrapper>
+      <TextWrapper>
+        <Text level={4} color="#ffffff" fstyle="normal" weight={500}>
+          Needapill is a service for foreigners residing in Korea who are in
+          need of medicinal information.
+        </Text>
+      </TextWrapper>
+    </HomeHeaderWrapper>
+  );
+}
+
+const HomeHeaderWrapper = styled.header`
+  width: 100%;
+  height: 6rem;
+  background-color: #3446d4;
+  display: inline-block;
+`;
+
+const TextWrapper = styled.div`
+  padding: 0 2.5rem;
+`;
+export default homeHeader;
