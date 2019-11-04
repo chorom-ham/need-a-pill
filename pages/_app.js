@@ -1,6 +1,8 @@
 import React from "react";
 import App from "next/app";
 import Head from "next/head";
+import Router from "next/router";
+import withGA from "next-ga";
 
 import styled, { createGlobalStyle } from "styled-components";
 
@@ -110,4 +112,4 @@ const BestWrapper = styled.div`
   background-color: #fff;
 `;
 
-export default Needapill;
+export default withGA("UA-151446008-1", Router)(Needapill);

@@ -9,5 +9,7 @@ export default styled.p`
     font-size: ${props.level * 0.3}rem;
     color: ${props.color};
     letter-spacing: ${props.spacing};
+    margin: 0;
+    padding: 0;
   `}
 `;

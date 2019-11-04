@@ -23,7 +23,7 @@ function homeMain() {
 }
 
 const Wrapper = styled.div`
-  padding: 1.6rem 0;
+  padding: 1rem 0;
 `;
 
 export default homeMain;

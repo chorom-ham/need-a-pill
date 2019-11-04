@@ -9,6 +9,7 @@
   },
   "dependencies": {
     "next": "9.1.2",
+    "next-ga": "^2.3.4",
     "react": "16.11.0",
     "react-dom": "16.11.0",
     "styled-components": "^4.4.1"
