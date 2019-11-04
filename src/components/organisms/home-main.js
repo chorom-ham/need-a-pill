@@ -11,7 +11,7 @@ function homeMain() {
     <Col>
       <Wrapper>
         <Row>
-          <Logo style={{ width: "15rem" }} fill="#3446d4"></Logo>
+          <Logo style={{ width: "15rem" }}></Logo>
         </Row>
       </Wrapper>
       <Row>

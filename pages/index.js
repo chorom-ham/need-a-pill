@@ -23,7 +23,7 @@ export default function Home() {
 
 const Wrapper = styled.div`
   display: flex;
-  height:70%
+  height:80%
   flex-direction: column;
   justify-content: center;
 `;

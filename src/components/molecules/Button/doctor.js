@@ -11,7 +11,7 @@ function doctor() {
   return (
     <Wrapper>
       <Col>
-        <Link href="body-part-choose">
+        <Link href="body-part-select">
           <a>
             <Row>
               <HomeButton>

@@ -3,7 +3,6 @@ import Head from "next/head";
 import Link from "next/link";
 import styled, { css } from "styled-components";
 import MainHeader from "../src/components/organisms/Header/mainHeader";
-import SearchForm from "../src/components/molecules/Form/search";
 
 export default function BeforeSearch() {
   return (
@@ -12,7 +11,7 @@ export default function BeforeSearch() {
         <title>Need a Pill</title>
       </Head>
       <MainHeader></MainHeader>
-      <SearchForm></SearchForm>
+      search result
     </>
   );
 }
