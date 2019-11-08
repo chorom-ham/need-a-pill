@@ -17,7 +17,6 @@ export default function BeforeSearch() {
       <SearchForm></SearchForm>
       <Filter></Filter>
       <MedicineCard></MedicineCard>
-      search result
     </>
   );
 }

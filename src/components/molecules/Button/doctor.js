@@ -28,6 +28,7 @@ function doctor() {
           color=" #3446d4"
           fstyle="normal"
           weight={500}
+          align="center"
         >
           I don’t know which medicine to take
         </Text>

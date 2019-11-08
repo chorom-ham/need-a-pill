@@ -12,6 +12,7 @@ function homeFooter() {
           fstyle="normal"
           weight={500}
           spacing="-0.032rem"
+          align="center"
         >
           Information provided on this site may differ from its intended
           purpose. Check with your doctor or pharmacist first. This material is
@@ -21,6 +22,7 @@ function homeFooter() {
       </TextWrapper>
       <TextWrapper>
         <Text
+          align="center"
           level={1}
           color="#b9b9ba"
           fstyle="normal"

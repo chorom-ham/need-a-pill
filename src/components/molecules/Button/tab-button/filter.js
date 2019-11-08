@@ -14,6 +14,7 @@ export default function TabButton(props) {
         fstyle="normal"
         weight={500}
         spacing="-0.048rem"
+        align="center"
       >
         {name}
       </Text>

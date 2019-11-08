@@ -8,4 +8,5 @@ export default styled.div`
   border-radius: 8px;
   box-shadow: 0 4px 6px 0 rgba(224, 223, 231, 0.16);
   border: solid 0.1rem #ececf0;
+  margin: auto 2rem;
 `;

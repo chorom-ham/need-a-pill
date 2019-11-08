@@ -11,7 +11,13 @@ function ReadMore() {
       <Link href="more-info">
         <A>
           <MoreButton justify="center" align="center" bottomRadius="0.8rem">
-            <Text level="5" weight="bold" spacing="-0.056rem" color="white">
+            <Text
+              level="5"
+              weight="bold"
+              spacing="-0.056rem"
+              color="white"
+              align="center"
+            >
               Read More
             </Text>
             <Right

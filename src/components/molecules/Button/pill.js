@@ -28,6 +28,7 @@ function pill() {
           color=" #3446d4"
           fstyle="normal"
           weight={500}
+          align="center"
         >
           I already have the medicine and want information on it
         </Text>

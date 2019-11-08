@@ -5,7 +5,13 @@ import Text from "../../atoms/text";
 function homeHeader() {
   return (
     <HomeHeaderWrapper>
-      <Text level={4} color="#ffffff" fstyle="normal" weight={500}>
+      <Text
+        level={4}
+        color="#ffffff"
+        fstyle="normal"
+        weight={500}
+        align="center"
+      >
         Needapill is a service for foreigners residing in Korea who are in need
         of medicinal information.
       </Text>

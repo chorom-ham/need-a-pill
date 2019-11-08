@@ -2,6 +2,7 @@ import React from "react";
 import styled from "styled-components";
 import ReadMoreButton from "../molecules/Button/read-more";
 import MainInfo from "../molecules/info-unit/main";
+import Row from "../atoms/Row";
 
 function MedicineCard() {
   return (
