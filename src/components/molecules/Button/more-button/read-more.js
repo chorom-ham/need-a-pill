@@ -1,8 +1,8 @@
 import React from "react";
 import Link from "next/link";
-import Right from "../../atoms/Button/icon/chevron/right";
-import MoreButton from "../../atoms/Button/moreButton";
-import Text from "../../atoms/text";
+import Right from "../../../atoms/Button/icon/chevron/right";
+import MoreButton from "../../../atoms/Button/moreButton";
+import Text from "../../../atoms/text";
 import styled from "styled-components";
 
 function ReadMore() {

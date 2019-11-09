@@ -1,0 +1,50 @@
+import React from "react";
+import styled from "styled-components";
+import ImageHolder from "../../atoms/image-holder/large";
+import Text from "../../atoms/text";
+
+export default function MedicineTopInfo() {
+  return (
+    <Wrapper>
+      <ImageHolder></ImageHolder>
+      <NameWrapper>
+        <Text
+          level={5}
+          weight="bold"
+          align="left"
+          color="black"
+          spacing="-0.056rem"
+        >
+          약이름영어
+        </Text>
+        <Text
+          level={4}
+          weight="noraml"
+          align="left"
+          color="#b9b9ba"
+          spacing="-0.048rem"
+        >
+          약이름한글
+        </Text>
+      </NameWrapper>
+    </Wrapper>
+  );
+}
+
+const Wrapper = styled.div`
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+`;
+
+const CardWrapper = styled.div`
+  width: 31.2rem
+  background-color: white;
+  box-shadow: 0 0.4rem 0.8rem 0 #e0dfe7;
+  box-sizing: border-box;
+  border-radius: 0.8rem;
+`;
+
+const NameWrapper = styled.div`
+  margin: 0 2.4rem;
+`;

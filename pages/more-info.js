@@ -4,7 +4,9 @@ import Link from "next/link";
 import styled, { css } from "styled-components";
 import MainHeader from "../src/components/organisms/Header/mainHeader";
 import SearchForm from "../src/components/molecules/Form/search";
-import Filter from "../src/components/organisms/Tab/filter";
+import TopInfo from "../src/components/organisms/medicine-top-info/medicine-top-info";
+import EffectsAndDosages from "../src/components/organisms/medicine-bottom-info/effects-and-dosages";
+import MoreInformations from "../src/components/organisms/medicine-bottom-info/more-informations";
 
 export default function BeforeSearch() {
   return (
@@ -14,7 +16,9 @@ export default function BeforeSearch() {
       </Head>
       <MainHeader></MainHeader>
       <SearchForm></SearchForm>
-      read more 누르면 연결되는 페이지
+      <TopInfo></TopInfo>
+      <EffectsAndDosages></EffectsAndDosages>
+      <MoreInformations></MoreInformations>
     </>
   );
 }

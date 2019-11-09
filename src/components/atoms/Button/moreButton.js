@@ -8,9 +8,12 @@ export default styled.button`
   border: none;
   display: flex;
   flex-direction: row;
+  padding: 0 1.6rem;
   ${props => css`
     border-bottom-right-radius: ${props.bottomRadius};
     border-bottom-left-radius: ${props.bottomRadius};
+    border-top-right-radius: ${props.topRadius};
+    border-top-left-radius: ${props.topRadius};
     justify-content: ${props.justify};
     align-items: ${props.align};
   `}

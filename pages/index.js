@@ -1,6 +1,5 @@
 import React from "react";
 import Head from "next/head";
-import Link from "next/link";
 import HomeHeader from "../src/components/organisms/Header/homeHeader";
 import HomeMain from "../src/components/organisms/home-main";
 import Footer from "../src/components/organisms/footer";

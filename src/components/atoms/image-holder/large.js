@@ -7,4 +7,6 @@ export default styled.div`
   object-fit: contain;
   border-radius: 0.8prem;
   box-shadow: 0 0.4rem 0.8rem 0 #e0dfe7;
+  margin: 2rem auto;
+  background-color: #ccc;
 `;

@@ -1,18 +1,17 @@
 import React from "react";
 import styled from "styled-components";
-import ReadMoreButton from "../molecules/Button/more-button/read-more";
-import MainInfo from "../molecules/info-unit/main";
-import Effects from "../molecules/info-unit/blue/effects";
-import Dosages from "../molecules/info-unit/blue/dosages";
+import ReadMoreButton from "../../molecules/Button/more-button/effects-and-dosages";
+import MainInfo from "../../molecules/info-unit/main";
+import Effects from "../../molecules/info-unit/blue/effects";
+import Dosages from "../../molecules/info-unit/blue/dosages";
 
-function MedicineCard() {
+export default function EffectsAndDosages() {
   return (
     <Wrapper>
       <CardWrapper>
-        <MainInfo></MainInfo>
+        <ReadMoreButton></ReadMoreButton>
         <Effects></Effects>
         <Dosages></Dosages>
-        <ReadMoreButton></ReadMoreButton>
       </CardWrapper>
     </Wrapper>
   );
@@ -21,6 +20,7 @@ function MedicineCard() {
 const Wrapper = styled.div`
   display: flex;
   justify-content: center;
+  margin-top: 1rem;
 `;
 
 const CardWrapper = styled.div`
@@ -30,5 +30,3 @@ const CardWrapper = styled.div`
   box-sizing: border-box;
   border-radius: 0.8rem;
 `;
-
-export default MedicineCard;
