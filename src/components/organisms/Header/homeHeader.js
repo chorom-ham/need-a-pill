@@ -6,7 +6,7 @@ function homeHeader() {
   return (
     <HomeHeaderWrapper>
       <Text
-        level={4}
+        level={3}
         color="#ffffff"
         fstyle="normal"
         weight={500}

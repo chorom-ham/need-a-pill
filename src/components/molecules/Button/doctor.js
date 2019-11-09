@@ -24,7 +24,7 @@ function doctor() {
       <Row>
         <Text
           width="12rem"
-          level={3}
+          level={1.5}
           color=" #3446d4"
           fstyle="normal"
           weight={500}

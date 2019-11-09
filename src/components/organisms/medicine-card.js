@@ -2,6 +2,8 @@ import React from "react";
 import styled from "styled-components";
 import ReadMoreButton from "../molecules/Button/read-more";
 import MainInfo from "../molecules/info-unit/main";
+import Effects from "../molecules/info-unit/blue/effects";
+import Dosages from "../molecules/info-unit/blue/dosages";
 import Row from "../atoms/Row";
 
 function MedicineCard() {
@@ -9,6 +11,8 @@ function MedicineCard() {
     <Wrapper>
       <CardWrapper>
         <MainInfo></MainInfo>
+        <Effects></Effects>
+        <Dosages></Dosages>
         <ReadMoreButton></ReadMoreButton>
       </CardWrapper>
     </Wrapper>

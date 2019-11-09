@@ -7,7 +7,7 @@ function homeFooter() {
     <HomeFooterWrapper>
       <TextWrapper>
         <Text
-          level={2}
+          level={1}
           color="#b9b9ba"
           fstyle="normal"
           weight={500}
@@ -23,7 +23,7 @@ function homeFooter() {
       <TextWrapper>
         <Text
           align="center"
-          level={1}
+          level={0.5}
           color="#b9b9ba"
           fstyle="normal"
           weight={500}
