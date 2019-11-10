@@ -8,7 +8,7 @@ export default function TabButton(props) {
   return (
     <Button onClick={onClick} isSelected={isSelected}>
       <Text
-        width="6rem"
+        width="fill-content"
         level={4}
         color={isSelected ? " #3446d4" : "#333"}
         fstyle="normal"

@@ -9,7 +9,7 @@ import styled from "styled-components";
 function ReadMore() {
   return (
     <>
-      <MoreButton align="center" topRadius="0.8rem">
+      <MoreButton align="center" topRadius="0.8rem" justify="space-between">
         <Text
           level="5"
           weight="bold"
@@ -21,9 +21,8 @@ function ReadMore() {
         </Text>
         <Up
           style={{
-            width: "0.5rem",
-            height: "0.85rem",
-            padding: "0 0.5rem"
+            width: "2.4rem",
+            height: "2.4rem"
           }}
           fill="white"
         ></Up>

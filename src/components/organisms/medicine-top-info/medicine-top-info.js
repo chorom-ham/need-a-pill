@@ -35,14 +35,7 @@ const Wrapper = styled.div`
   display: flex;
   justify-content: center;
   flex-direction: column;
-`;
-
-const CardWrapper = styled.div`
-  width: 31.2rem
-  background-color: white;
-  box-shadow: 0 0.4rem 0.8rem 0 #e0dfe7;
-  box-sizing: border-box;
-  border-radius: 0.8rem;
+  margin-bottom: 1.3rem;
 `;
 
 const NameWrapper = styled.div`

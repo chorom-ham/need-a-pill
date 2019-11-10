@@ -10,7 +10,7 @@ import MoreInformations from "../src/components/organisms/medicine-bottom-info/m
 
 export default function BeforeSearch() {
   return (
-    <>
+    <Wrapper>
       <Head>
         <title>Need a Pill</title>
       </Head>
@@ -19,6 +19,10 @@ export default function BeforeSearch() {
       <TopInfo></TopInfo>
       <EffectsAndDosages></EffectsAndDosages>
       <MoreInformations></MoreInformations>
-    </>
+    </Wrapper>
   );
 }
+
+const Wrapper = styled.div`
+  background-color: #fff;
+`;

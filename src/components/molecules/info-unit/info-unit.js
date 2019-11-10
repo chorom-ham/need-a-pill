@@ -1,18 +1,18 @@
 import React from "react";
 import styled from "styled-components";
-import Text from "../../../atoms/text";
+import Text from "../../atoms/text";
 
-export default function lastModification() {
+export default function infoUnit(props) {
   return (
     <Wrapper>
       <Text
         level={3}
         weight="bold"
         align="left"
-        color="#b9b9ba"
+        color={props.color}
         spacing="-0.04rem"
       >
-        Last Date of Usage Manual Modification
+        {props.title}
       </Text>
       <Text
         level={3}
@@ -21,7 +21,7 @@ export default function lastModification() {
         color="#333"
         spacing="-0.04rem"
       >
-        최근 수정일자
+        {props.content}
       </Text>
     </Wrapper>
   );

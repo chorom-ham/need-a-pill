@@ -8,7 +8,7 @@ export default styled.button`
   border: none;
   display: flex;
   flex-direction: row;
-  padding: 0 1.6rem;
+  padding: 0 0.8rem 0 1.6rem;
   ${props => css`
     border-bottom-right-radius: ${props.bottomRadius};
     border-bottom-left-radius: ${props.bottomRadius};
