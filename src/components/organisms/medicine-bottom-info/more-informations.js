@@ -4,24 +4,23 @@ import ReadMoreButton from "../../molecules/Button/more-button/show-more";
 import InfoUnit from "../../molecules/info-unit/info-unit";
 
 export default function MoreInformations() {
-  //selcted가 0인 상태가 디폴트. selected가 1이면 정보 숨김.
-  const [selected, setSelected] = useState(0);
+  const [closed, setClosed] = useState(false);
 
   return (
     <Wrapper>
       <CardWrapper>
-        {selected && (
+        {closed && (
           <ReadMoreButton
-            onClick={() => setSelected(0)}
-            isSelected={selected}
+            onClick={() => setClosed(false)}
+            isClosed={closed}
             title="More Informations"
           ></ReadMoreButton>
         )}
-        {selected || (
+        {closed || (
           <>
             <ReadMoreButton
-              onClick={() => setSelected(1)}
-              isSelected={selected}
+              onClick={() => setClosed(true)}
+              isClosed={closed}
               title="More Informations"
             ></ReadMoreButton>
             <InfoUnit color="#b9b9ba" title="Description" content="약 외형" />

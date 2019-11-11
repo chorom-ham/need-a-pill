@@ -7,14 +7,14 @@ import Text from "../../../atoms/text";
 import styled from "styled-components";
 
 function ShowMore(props) {
-  const { isSelected, onClick } = props;
+  const { isClosed, onClick } = props;
   return (
     <>
       <MoreButton
         onClick={onClick}
         align="center"
         topRadius="0.8rem"
-        bottomRadius={isSelected ? "0.8rem" : "0"}
+        bottomRadius={isClosed ? "0.8rem" : "0"}
         justify="space-between"
       >
         <Text
@@ -26,7 +26,7 @@ function ShowMore(props) {
         >
           {props.title}
         </Text>
-        {isSelected && (
+        {isClosed && (
           <Down
             style={{
               width: "2.4rem",
@@ -35,7 +35,7 @@ function ShowMore(props) {
             fill="white"
           ></Down>
         )}
-        {isSelected || (
+        {isClosed || (
           <Up
             style={{
               width: "2.4rem",
