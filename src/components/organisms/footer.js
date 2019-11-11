@@ -39,6 +39,7 @@ function homeFooter() {
 const HomeFooterWrapper = styled.footer`
   display: inline-block;
   padding: 1rem 0;
+  background-color: #fff;
 `;
 
 const TextWrapper = styled.div`

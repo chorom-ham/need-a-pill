@@ -25,4 +25,5 @@ const Wrapper = styled.div`
   height:80%
   flex-direction: column;
   justify-content: center;
+  background-color: #fff;
 `;
