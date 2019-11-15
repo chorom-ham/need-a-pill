@@ -8,7 +8,7 @@ function searchForm() {
     <Form>
       <Input type="text" name="keyword" placeholder="Enter drug name"></Input>
       <Link href="search-result">
-        <Button>
+        <Button type="submit">
           <a>
             <SearchIcon style={{ width: "2rem", height: "2rem " }}></SearchIcon>
           </a>
