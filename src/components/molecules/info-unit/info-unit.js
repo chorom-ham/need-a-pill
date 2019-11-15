@@ -16,10 +16,11 @@ export default function infoUnit(props) {
       </Text>
       <Text
         level={3}
-        weight="noraml"
+        weight="normal"
         align="left"
         color="#333"
         spacing="-0.04rem"
+        width="27.8rem"
       >
         {props.content}
       </Text>
@@ -31,5 +32,6 @@ const Wrapper = styled.div`
   width: 100%;
   display: flex;
   flex-direction: column;
-  margin: 0.8rem 1.6rem;
+  margin: 0.8rem 1.6rem 0.8rem 1.6rem;
+  box-sizing: border-box;
 `;

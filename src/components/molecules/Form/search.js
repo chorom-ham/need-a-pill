@@ -1,24 +1,41 @@
-import React from "react";
+import React, { useState } from "react";
 import Link from "next/link";
 import styled, { css } from "styled-components";
 import SearchIcon from "../../atoms/Button/icon/search";
 
-function searchForm() {
+function searchForm(props) {
+  const [query, setQuery] = useState();
+  const filter = "relevance";
+  const page_num = 2;
+
   return (
-    <Form>
-      <Input type="text" name="keyword" placeholder="Enter drug name"></Input>
-      <Link href="search-result">
-        <Button type="submit">
+    <Wrapper>
+      <Input
+        type="text"
+        name="keyword"
+        placeholder="Enter drug name"
+        value={query}
+        onChange={event => {
+          setQuery(event.target.value);
+          if (props.setQuery) {
+            props.setQuery(event.target.value);
+          }
+        }}
+      ></Input>
+      <Link
+        href={`/search-result?keyword=${query}&filter=${filter}&page=${page_num}`}
+      >
+        <Button onClick={props.onClick}>
           <a>
             <SearchIcon style={{ width: "2rem", height: "2rem " }}></SearchIcon>
           </a>
         </Button>
       </Link>
-    </Form>
+    </Wrapper>
   );
 }
 
-const Form = styled.form`
+const Wrapper = styled.div`
   display: flex;
   align-items: center;
   width: 100%;

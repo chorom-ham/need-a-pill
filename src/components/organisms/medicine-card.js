@@ -4,13 +4,18 @@ import ReadMoreButton from "../molecules/Button/more-button/read-more";
 import MainInfo from "../molecules/info-unit/main";
 import InfoUnit from "../molecules/info-unit/info-unit";
 
-function MedicineCard() {
+function MedicineCard(props) {
+  const engName = props.engName;
+  const krName = props.krName;
+  const effects = props.effects;
+  const dosages = props.dosages;
+
   return (
     <Wrapper>
       <CardWrapper>
-        <MainInfo></MainInfo>
-        <InfoUnit color="#3446d4" title="Effects" content="효능 효과" />
-        <InfoUnit color="#3446d4" title="Dosages" content="복용법" />
+        <MainInfo engName={engName} krName={krName}></MainInfo>
+        <InfoUnit color="#3446d4" title="Effects" content={effects} />
+        <InfoUnit color="#3446d4" title="Dosages" content={dosages} />
         <ReadMoreButton></ReadMoreButton>
       </CardWrapper>
     </Wrapper>
