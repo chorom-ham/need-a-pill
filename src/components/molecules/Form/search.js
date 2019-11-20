@@ -13,7 +13,7 @@ function searchForm(props) {
       <Input
         type="text"
         name="keyword"
-        placeholder="Enter drug name"
+        placeholder="Enter drug name / barcode"
         value={query}
         onChange={event => {
           setQuery(event.target.value);
@@ -52,6 +52,7 @@ const Input = styled.input`
   padding: 0 1.6rem;
   box-sizing: border-box;
   letter-spacing: -0.05rem;
+  font-size: 1.2rem;
 `;
 const Button = styled.button`
   width: 2.4rem;

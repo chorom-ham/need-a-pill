@@ -6,7 +6,7 @@ export default styled.p`
     font-weight: ${props.weight};
     font-style: ${props.fstyle};
     text-align: ${props.align};
-    font-size: ${0.6 + props.level * 0.2}rem;
+    font-size: ${0.4 + props.level * 0.2}rem;
     color: ${props.color};
     letter-spacing: ${props.spacing};
     margin: 0;

@@ -74,6 +74,7 @@ class Needapill extends App {
         <GlobalStyle />
         <Head>
           <title>Need a Pill</title>
+          <link rel="shortcut icon" href="favicon.ico"></link>
         </Head>
         <BestWrapper>
           <Grey />
