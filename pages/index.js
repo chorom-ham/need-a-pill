@@ -14,9 +14,10 @@ export default function Home() {
 }
 
 const Wrapper = styled.div`
-  height: auto;
   display: flex;
   flex-direction: column;
   justify-content: center;
   background-color: #fff;
+  min-height: 100%;
+  margin-top: 0;
 `;

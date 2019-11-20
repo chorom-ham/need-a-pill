@@ -30,12 +30,11 @@ function homeFooter() {
 const HomeFooterWrapper = styled.footer`
   width: 100%;
   background-color: #fff;
-  position: absolute;
-  bottom: 0rem;
   display: flex;
   flex-direction: column;
   align-items: center;
   margin: 0 auto;
+  margin-top: auto;
   margin-bottom: 1.2rem;
 `;
 

@@ -19,10 +19,7 @@ export default function Home() {
       <ShowBodyPart
         show={show}
         onClick={() => {
-          if (show) setShow(true);
-          else setShow(false);
-          console.log({ show });
-          console.log("!!!!!!!");
+          setShow(!show);
         }}
       ></ShowBodyPart>
 
@@ -41,9 +38,8 @@ const Wrapper = styled.div`
   flex-direction: column;
   align-items: center;
   justify-content: center;
-  position: absolute;
   background-color: #fff;
   ${props => css`
-    ${props.show ? "top:5.16rem" : "top:13.5rem"}
+    ${props.show ? "margin-top:5.16rem" : "margin-top:13.5rem"}
   `}
 `;
