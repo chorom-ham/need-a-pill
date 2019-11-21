@@ -23,9 +23,7 @@ function searchForm(props) {
         }}
         onKeyPress={event => {
           if (event.key === "Enter") {
-            {
-              props.onClick;
-            }
+            props.onClick();
           }
         }}
       ></Input>
