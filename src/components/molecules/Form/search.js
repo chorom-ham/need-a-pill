@@ -21,6 +21,13 @@ function searchForm(props) {
             props.setQuery(event.target.value);
           }
         }}
+        onKeyPress={event => {
+          if (event.key === "Enter") {
+            {
+              props.onClick;
+            }
+          }
+        }}
       ></Input>
       <Link
         href={`/search-result?keyword=${query}&filter=${filter}&page=${page_num}`}
