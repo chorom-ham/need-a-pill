@@ -1,17 +1,24 @@
-import React from "react";
+import React, { useState } from "react";
 import styled, { css } from "styled-components";
 import Text from "../../atoms/text";
 
 export default function bodyPartButton(props) {
+  const [isClicked, setIsClicked] = useState(false);
+
   return (
-    <Wrapper href={props.link}>
-      <IconWrapper>
+    <Wrapper
+      href={props.link}
+      onClick={() => {
+        setIsClicked(!isClicked);
+      }}
+    >
+      <IconWrapper isClicked={isClicked}>
         <props.Icon
           style={{
             width: `${props.width}rem`,
             height: `${props.height}rem`
           }}
-          fill="#3446d4"
+          fill={isClicked ? "#fff" : "#3446d4"}
         />
       </IconWrapper>
       <Text
@@ -44,7 +51,12 @@ const IconWrapper = styled.button`
   border-radius: 0.8rem;
   border: none;
   box-shadow: 0 0.4rem 0.8rem 0 #e0dfe7;
-  background-color: #fff;
+  ${props => css`
+    ${props.isClicked
+      ? "background-color: #3446d4;"
+      : "background-color: #fff;"}
+  `}
+
   display: flex;
   justify-content: center;
   align-items: center;
