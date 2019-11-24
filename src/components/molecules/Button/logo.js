@@ -7,7 +7,7 @@ function logoButton() {
     <>
       <Link href="index">
         <a>
-          <LogoIcon style={{ width: "10rem" }}></LogoIcon>
+          <LogoIcon style={{ width: "10.31rem", height: "2.03rem" }}></LogoIcon>
         </a>
       </Link>
     </>

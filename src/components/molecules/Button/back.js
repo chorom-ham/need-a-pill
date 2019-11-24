@@ -6,7 +6,7 @@ function backButton() {
   return (
     <a onClick={() => Router.back()}>
       <BackIcon
-        style={{ width: "1.5rem", height: "1.5rem" }}
+        style={{ width: "1.26rem", height: "1.24rem" }}
         fill="#3446d4"
       ></BackIcon>
     </a>

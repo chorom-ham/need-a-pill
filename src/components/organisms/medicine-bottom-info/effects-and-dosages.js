@@ -3,7 +3,7 @@ import styled from "styled-components";
 import ReadMoreButton from "../../molecules/Button/more-button/show-more";
 import InfoUnit from "../../molecules/info-unit/info-unit";
 
-export default function EffectsAndDosages() {
+export default function EffectsAndDosages(props) {
   const [closed, setClosed] = useState(false);
 
   return (
@@ -23,8 +23,8 @@ export default function EffectsAndDosages() {
               isClosed={closed}
               title="Effects and Dosages"
             ></ReadMoreButton>
-            <InfoUnit color="#3446d4" title="Effects" content="효능 효과" />
-            <InfoUnit color="#3446d4" title="Dosages" content="복용법" />
+            <InfoUnit color="#3446d4" title="Effects" content={props.effects} />
+            <InfoUnit color="#3446d4" title="Dosages" content={props.dosages} />
           </>
         )}
       </CardWrapper>

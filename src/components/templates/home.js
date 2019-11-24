@@ -2,7 +2,7 @@ import React, { useState } from "react";
 import styled, { css } from "styled-components";
 import Logo from "../atoms/icon/logo";
 import Search from "../molecules/Form/search";
-import ShowBodyPart from "../molecules/Button/show-body-part";
+import ShowBodyPart from "../molecules/Button/home/show-body-part";
 import BodyPartContainer from "../organisms/body-part-container";
 
 export default function Home() {

@@ -6,7 +6,7 @@ export default function infoUnit(props) {
   return (
     <Wrapper>
       <Text
-        level={3}
+        level={4}
         weight="bold"
         align="left"
         color={props.color}
@@ -15,7 +15,7 @@ export default function infoUnit(props) {
         {props.title}
       </Text>
       <Text
-        level={3}
+        level={4}
         weight="normal"
         align="left"
         color="#333"

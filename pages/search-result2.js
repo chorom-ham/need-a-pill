@@ -4,7 +4,7 @@ import Link from "next/link";
 import styled, { css } from "styled-components";
 import MainHeader from "../src/components/organisms/Header/mainHeader";
 
-import SearchResults from "../src/components/templates/search-result";
+import SearchResults from "../src/components/templates/search-result2";
 
 export default function SearchResult() {
   return (

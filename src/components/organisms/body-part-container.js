@@ -1,6 +1,6 @@
 import React from "react";
 import styled, { css } from "styled-components";
-import BodyPartButton from "../molecules/Button/body-part";
+import BodyPartButton from "../molecules/Button/home/body-part";
 
 import Eye from "../atoms/Button/icon/body-part/eye";
 import Nose from "../atoms/Button/icon/body-part/nose";
@@ -71,120 +71,120 @@ const bodyPartItems = [
     Icon: Eye,
     size: [3.76, 2.37],
     name: "Eye",
-    link: "/symptom-select"
+    link: "/symptom-select?keyword=Eye&page=2"
   },
   {
     Icon: Nose,
     size: [2.27, 3.46],
     name: "Nose",
-    link: "/symptom-select"
+    link: "/symptom-select?keyword=Nose&page=2"
   },
   {
     Icon: Mouth,
     size: [3.67, 1.67],
     name: "Mouth",
-    link: "/symptom-select"
+    link: "/symptom-select?keyword=Mouth&page=2"
   },
   {
     Icon: TeethGum,
     size: [3.05, 3.25],
     name: "Teeth gum",
-    link: "/symptom-select"
+    link: "/symptom-select?keyword=Teeth Gum&page=2"
   },
   {
     Icon: Ear,
     size: [2.42, 3.46],
     name: "Ear",
-    link: "/symptom-select"
+    link: "/symptom-select?keyword=Ear&page=2"
   },
   {
     Icon: Head,
     size: [3.04, 3.53],
     name: "Head",
-    link: "/symptom-select"
+    link: "/symptom-select?keyword=Head&page=2"
   },
   {
     Icon: NeckShoulder,
     size: [3.57, 2.31],
     name: "Neck/Shoulder",
-    link: "/symptom-select"
+    link: "/symptom-select?keyword=Neck/Shoulder&page=2"
   },
   {
     Icon: Throat,
     size: [2.82, 3.66],
     name: "Throat",
-    link: "/symptom-select"
+    link: "/symptom-select?keyword=Throat&page=2"
   },
   {
     Icon: Arm,
     size: [3.2, 3.78],
     name: "Arm",
-    link: "/symptom-select"
+    link: "/symptom-select?keyword=Arm&page=2"
   },
   {
     Icon: Foot,
     size: [3.49, 2.85],
     name: "Foot",
-    link: "/symptom-select"
+    link: "/symptom-select?keyword=Foot&page=2"
   },
   {
     Icon: Leg,
     size: [2.13, 3.94],
     name: "Leg",
-    link: "/symptom-select"
+    link: "/symptom-select?keyword=Leg&page=2"
   },
   {
     Icon: Joints,
     size: [1.7, 3.57],
     name: "Joints",
-    link: "/symptom-select"
+    link: "/symptom-select?keyword=Joints&page=2"
   },
   {
     Icon: Stomach,
     size: [3.24, 3.24],
     name: "Stomach",
-    link: "/symptom-select"
+    link: "/symptom-select?keyword=Stomach&page=2"
   },
   {
     Icon: Liver,
     size: [3.27, 2.2],
     name: "Liver",
-    link: "/symptom-select"
+    link: "/symptom-select?keyword=Liver&page=2"
   },
   {
     Icon: Lungs,
     size: [3.46, 3.1],
     name: "Lungs",
-    link: "/symptom-select"
+    link: "/symptom-select?keyword=Lungs&page=2"
   },
   {
     Icon: Abdomen,
     size: [2.76, 2.69],
     name: "Abdomen",
-    link: "/symptom-select"
+    link: "/symptom-select?keyword=Abdomen&page=2"
   },
   {
     Icon: Muscles,
     size: [3.9, 3.88],
     name: "Muscles",
-    link: "/symptom-select"
+    link: "/symptom-select?keyword=Muscles&page=2"
   },
   {
     Icon: Waist,
     size: [3.67, 3.37],
     name: "Waist",
-    link: "/symptom-select"
+    link: "/symptom-select?keyword=Waist&page=2"
   },
   {
     Icon: MenstrualPain,
     size: [3.77, 3.51],
     name: "Menstrual Pain",
-    link: "/symptom-select"
+    link: "/symptom-select?keyword=Menstrual Pain&page=2"
   },
   {
     Icon: Hand,
     size: [2.16, 3.69],
     name: "Hand",
-    link: "/symptom-select"
+    link: "/symptom-select?keyword=Hand&page=2"
   }
 ];

@@ -3,19 +3,19 @@ import styled from "styled-components";
 import ImageHolder from "../../atoms/image-holder/large";
 import Text from "../../atoms/text";
 
-export default function MedicineTopInfo() {
+export default function MedicineTopInfo(props) {
   return (
     <Wrapper>
       <ImageHolder></ImageHolder>
       <NameWrapper>
         <Text
-          level={5}
+          level={6}
           weight="bold"
           align="left"
           color="black"
           spacing="-0.056rem"
         >
-          약이름영어
+          {props.engName}
         </Text>
         <Text
           level={4}
@@ -24,7 +24,7 @@ export default function MedicineTopInfo() {
           color="#b9b9ba"
           spacing="-0.048rem"
         >
-          약이름한글
+          {props.krName}
         </Text>
       </NameWrapper>
     </Wrapper>

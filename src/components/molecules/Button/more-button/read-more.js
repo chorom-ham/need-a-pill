@@ -5,10 +5,10 @@ import MoreButton from "../../../atoms/Button/moreButton";
 import Text from "../../../atoms/text";
 import styled from "styled-components";
 
-function ReadMore() {
+function ReadMore(props) {
   return (
     <>
-      <Link href="more-info">
+      <Link href={`more-info?name=${props.engName}`}>
         <A>
           <MoreButton justify="center" align="center" bottomRadius="0.8rem">
             <Text

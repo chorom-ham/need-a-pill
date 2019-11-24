@@ -1,6 +1,6 @@
 import React, { useState } from "react";
 import styled, { css } from "styled-components";
-import Text from "../../atoms/text";
+import Text from "../../../atoms/text";
 
 export default function bodyPartButton(props) {
   const [isClicked, setIsClicked] = useState(false);

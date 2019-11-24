@@ -1,8 +1,8 @@
 import React from "react";
 import styled from "styled-components";
-import Text from "../../atoms/text";
-import Down from "../../atoms/Button/icon/chevron/down";
-import Up from "../../atoms/Button/icon/chevron/up";
+import Text from "../../../atoms/text";
+import Down from "../../../atoms/Button/icon/chevron/down";
+import Up from "../../../atoms/Button/icon/chevron/up";
 
 export default function showBodyPart(props) {
   const { show, onClick } = props;

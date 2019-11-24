@@ -3,7 +3,7 @@ import styled, { css } from "styled-components";
 import { useRouter } from "next/router";
 
 import ErrorImage from "../atoms/icon/curious-doctor";
-import SearchForm from "../molecules/Form/search";
+import TextBox from "../molecules/text-box/show-selected";
 import Filter from "../organisms/Tab/filter";
 import MedicineCard from "../organisms/medicine-card";
 import axios from "axios";
@@ -11,7 +11,7 @@ import axios from "axios";
 export default function searchResult() {
   const [query, setQuery] = useState();
   const router = useRouter();
-  const [{ data, isLoading, isError }, doFetch] = useDrugSearchApi(
+  const [{ data, isLoading, isError }, doFetch] = useSymptomSearchApi(
     router.query.keyword,
     router.query.filter,
     router.query.page
@@ -20,11 +20,8 @@ export default function searchResult() {
   if (isLoading) {
     return (
       <>
-        <SearchForm
-          setQuery={setQuery}
-          onClick={() => doFetch(query)}
-        ></SearchForm>
-        <Filter></Filter>
+        <TextBox selected={router.query.keyword}></TextBox>
+
         <div>Loading...</div>
       </>
     );
@@ -35,12 +32,7 @@ export default function searchResult() {
   }
   return (
     <Wrapper>
-      <SearchForm
-        setQuery={setQuery}
-        onClick={() => doFetch(query)}
-      ></SearchForm>
-      <Filter></Filter>
-      {isError && <div>Error!!!!!!!!!</div>}
+      <TextBox selected={router.query.keyword}></TextBox>
       {!isLoading && !data && (
         <ErrorWrapper>
           <ErrorImage
@@ -66,7 +58,7 @@ export default function searchResult() {
   );
 }
 
-const useDrugSearchApi = (initialSearch, initialFilter, initialPageNum) => {
+const useSymptomSearchApi = (initialSearch, initialFilter, initialPageNum) => {
   const [data, setData] = useState(null);
   const [search, setSearch] = useState(initialSearch);
   const [filter, setFilter] = useState(initialFilter);
@@ -80,7 +72,7 @@ const useDrugSearchApi = (initialSearch, initialFilter, initialPageNum) => {
       setIsLoading(true);
       try {
         const result = await axios(
-          `https://needapill-server.herokuapp.com/drugs/search?keyword=${search}&filter=${filter}&page_num=${pageNum}`
+          `https://needapill-server.herokuapp.com/drugs/symptom?keyword=${search}&page_num=${pageNum}`
         );
         setData(result.data);
         setIsLoading(false);

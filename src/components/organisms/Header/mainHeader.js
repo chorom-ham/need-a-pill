@@ -23,7 +23,7 @@ const MainHeaderWrapper = styled.header`
   flex-direction: row;
   align-items: center;
   justify-content: center;
-  margin: 2.5rem 0;
+  margin: 5.6rem 0 2.91rem 0;
 `;
 
 const BackButtonWrapper = styled.div`
@@ -32,8 +32,10 @@ const BackButtonWrapper = styled.div`
 `;
 
 const LogoButtonWrapper = styled.div`
-  position: relavive;
-  left: 40%;
+  position: absolute;
+  left: 12.6rem;
+  width: "10.31rem";
+  height: "2.03rem";
 `;
 
 export default mainHeader;

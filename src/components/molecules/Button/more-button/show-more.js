@@ -18,7 +18,7 @@ function ShowMore(props) {
         justify="space-between"
       >
         <Text
-          level="5"
+          level="4"
           weight="bold"
           spacing="-0.056rem"
           color="white"

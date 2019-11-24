@@ -3,7 +3,7 @@ import styled from "styled-components";
 import ReadMoreButton from "../../molecules/Button/more-button/show-more";
 import InfoUnit from "../../molecules/info-unit/info-unit";
 
-export default function MoreInformations() {
+export default function MoreInformations(props) {
   const [closed, setClosed] = useState(false);
 
   return (
@@ -23,29 +23,40 @@ export default function MoreInformations() {
               isClosed={closed}
               title="More Informations"
             ></ReadMoreButton>
-            <InfoUnit color="#b9b9ba" title="Description" content="약 외형" />
+            <InfoUnit
+              color="#b9b9ba"
+              title="Description"
+              content={props.description}
+            />
             <InfoUnit
               color="#b9b9ba"
               title="Substance (by mg)"
-              content="약 성분"
+              content={props.substances}
             />
-            <InfoUnit color="#b9b9ba" title="Precautions" content="주의사항" />
             <InfoUnit
               color="#b9b9ba"
               title="Preservation"
-              content="보관 방법"
+              content={props.preservation}
             />
-            <InfoUnit color="#b9b9ba" title="Packaging" content="패키징" />
+            <InfoUnit
+              color="#b9b9ba"
+              title="Packaging"
+              content={props.packaging}
+            />
             <InfoUnit
               color="#b9b9ba"
               title="Last Date of Usage Manual Modification"
-              content="최근 수정일자"
+              content={props.lastDate}
             />
-            <InfoUnit color="#b9b9ba" title="ATC Code" content="ATC 코드" />
+            <InfoUnit
+              color="#b9b9ba"
+              title="ATC Code"
+              content={props.ATCCode}
+            />
             <InfoUnit
               color="#b9b9ba"
               title="Link to health.kr"
-              content="health.kr로 연결링크"
+              content={props.link}
             />
           </>
         )}

@@ -5,18 +5,14 @@ import MainInfo from "../molecules/info-unit/main";
 import InfoUnit from "../molecules/info-unit/info-unit";
 
 function MedicineCard(props) {
-  const engName = props.engName;
-  const krName = props.krName;
-  const effects = props.effects;
-  const dosages = props.dosages;
-
+  const { engName, krName, effects, dosages } = props;
   return (
     <Wrapper>
       <CardWrapper>
         <MainInfo engName={engName} krName={krName}></MainInfo>
         <InfoUnit color="#3446d4" title="Effects" content={effects} />
         <InfoUnit color="#3446d4" title="Dosages" content={dosages} />
-        <ReadMoreButton></ReadMoreButton>
+        <ReadMoreButton engName={engName}></ReadMoreButton>
       </CardWrapper>
     </Wrapper>
   );

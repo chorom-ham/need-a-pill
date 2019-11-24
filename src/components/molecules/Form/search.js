@@ -30,22 +30,32 @@ function searchForm(props) {
       <Link
         href={`/search-result?keyword=${query}&filter=${filter}&page=${page_num}`}
       >
-        <Button onClick={props.onClick}>
-          <a>
+        <A>
+          <Button onClick={props.onClick}>
             <SearchIcon style={{ width: "2rem", height: "2rem " }}></SearchIcon>
-          </a>
-        </Button>
+          </Button>
+        </A>
       </Link>
     </Wrapper>
   );
 }
+
+const A = styled.a`
+  width: 2.4rem;
+  height: 2.4rem;
+  display: flex;
+  align-items: center;
+  position: absolute;
+  right: 3.5rem;
+  border: none;
+  background-color: transparent;
+`;
 
 const Wrapper = styled.div`
   display: flex;
   align-items: center;
   width: 100%;
   justify-content: center;
-  margin: 0 auto 0 auto;
 `;
 const Input = styled.input`
   width: 31.2rem;
@@ -58,13 +68,11 @@ const Input = styled.input`
   box-sizing: border-box;
   letter-spacing: -0.05rem;
   font-size: 1.2rem;
+  margin: 0 auto;
 `;
 const Button = styled.button`
-  width: 2.4rem;
-  height: 2.4rem;
-  object-fit: contain;
-  position: absolute;
-  right: 3.5rem;
+  display: flex;
+  align-items: center;
   border: none;
   background-color: transparent;
 `;
