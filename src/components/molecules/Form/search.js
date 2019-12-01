@@ -25,11 +25,13 @@ function searchForm(props) {
         }}
         onKeyPress={event => {
           if (event.key === "Enter") {
-            if (props.onClick) props.onClick();
-            else
-              router.push(
-                `/search-result?keyword=${query}&filter=${filter}&page=${page_num}`
-              );
+            if (query != undefined) {
+              if (props.onClick) props.onClick();
+              else
+                router.push(
+                  `/search-result?keyword=${query}&filter=${filter}&page=${page_num}`
+                );
+            }
           }
         }}
       ></Input>
@@ -37,7 +39,11 @@ function searchForm(props) {
         href={`/search-result?keyword=${query}&filter=${filter}&page=${page_num}`}
       >
         <A>
-          <Button onClick={props.onClick}>
+          <Button
+            onClick={() => {
+              if (query != undefined) props.onClick();
+            }}
+          >
             <SearchIcon style={{ width: "2rem", height: "2rem " }}></SearchIcon>
           </Button>
         </A>
