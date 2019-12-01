@@ -2,11 +2,13 @@ import React, { useState } from "react";
 import Link from "next/link";
 import styled, { css } from "styled-components";
 import SearchIcon from "../../atoms/Button/icon/search";
+import { useRouter } from "next/router";
 
 function searchForm(props) {
   const [query, setQuery] = useState();
   const filter = "relevance";
   const page_num = 2;
+  const router = useRouter();
 
   return (
     <Wrapper>
@@ -23,7 +25,11 @@ function searchForm(props) {
         }}
         onKeyPress={event => {
           if (event.key === "Enter") {
-            props.onClick();
+            if (props.onClick) props.onClick();
+            else
+              router.push(
+                `/search-result?keyword=${query}&filter=${filter}&page=${page_num}`
+              );
           }
         }}
       ></Input>

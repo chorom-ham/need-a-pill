@@ -3,6 +3,7 @@ import Head from "next/head";
 import HomeComponents from "../src/components/templates/home";
 import Footer from "../src/components/organisms/footer";
 import styled, { css } from "styled-components";
+//import LogIn from "../src/components/LogIn";
 
 export default function Home() {
   return (

@@ -32,7 +32,10 @@ export default function searchResult() {
   }
   return (
     <Wrapper>
-      <TextBox selected={router.query.keyword}></TextBox>
+      <BoxWrapper>
+        <TextBox selected={router.query.keyword}></TextBox>
+      </BoxWrapper>
+
       {!isLoading && !data && (
         <ErrorWrapper>
           <ErrorImage
@@ -87,6 +90,10 @@ const useSymptomSearchApi = (initialSearch, initialFilter, initialPageNum) => {
 };
 
 const Wrapper = styled.div``;
+
+const BoxWrapper = styled.div`
+  margin-bottom: 2rem;
+`;
 
 const ErrorWrapper = styled.div`
   margin: 9.4rem auto;
