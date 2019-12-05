@@ -31,7 +31,7 @@ export default function MoreInformations(props) {
             <InfoUnit
               color="#b9b9ba"
               title="Substance (by mg)"
-              content={props.substances}
+              content={props.substance}
             />
             <InfoUnit
               color="#b9b9ba"

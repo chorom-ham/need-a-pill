@@ -31,7 +31,9 @@ export default function MoreInfo() {
               <MoreInformations
                 key={index + 2}
                 description={value.description}
-                substance={value.substances}
+                substance={value.substances.map(value => (
+                  <Li>{value.name + " " + value.amount + "mg"}</Li>
+                ))}
                 preservation={value.preservation}
                 packaging={value.packaging}
                 lastDate={value.last_updated}
@@ -45,10 +47,6 @@ export default function MoreInfo() {
     </Wrapper>
   );
 }
-
-const Wrapper = styled.div`
-  background-color: #fff;
-`;
 
 const useDrugSearchApi = name => {
   const [data, setData] = useState(null);
@@ -74,3 +72,11 @@ const useDrugSearchApi = name => {
 
   return [{ data, isLoading, isError }];
 };
+
+const Wrapper = styled.div`
+  background-color: #fff;
+`;
+
+const Li = styled.li`
+  list-style: none;
+`;

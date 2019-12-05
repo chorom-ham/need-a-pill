@@ -54,13 +54,22 @@ export default function searchResult() {
       )}
       {data && (
         <div>
+          {console.log(data)}
           {data.map((value, index) => (
             <MedicineCard
               key={index}
               engName={value.eng_name}
               krName={value.kr_name}
-              effects={value.effects}
-              dosages={value.dosage}
+              effects={
+                value.effects.length
+                  ? value.effects
+                  : value.effects.map(value => <Li>{value}</Li>)
+              }
+              dosages={
+                value.dosage.length
+                  ? value.dosage.map(value => <Li>{value}</Li>)
+                  : value.dosage
+              }
             ></MedicineCard>
           ))}
         </div>
@@ -107,4 +116,8 @@ const ErrorWrapper = styled.div`
   flex-direction: column;
   justify-content: space-between;
   align-items: center;
+`;
+
+const Li = styled.li`
+  list-style: none;
 `;
