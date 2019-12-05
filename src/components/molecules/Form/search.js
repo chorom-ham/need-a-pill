@@ -35,33 +35,24 @@ function searchForm(props) {
           }
         }}
       ></Input>
-      <Link
-        href={`/search-result?keyword=${query}&filter=${filter}&page=${page_num}`}
+      <Button
+        onClick={() => {
+          if (query != undefined) {
+            if (query != undefined) {
+              if (props.onClick) props.onClick();
+              else
+                router.push(
+                  `/search-result?keyword=${query}&filter=${filter}&page=${page_num}`
+                );
+            }
+          }
+        }}
       >
-        <A>
-          <Button
-            onClick={() => {
-              if (query != undefined) props.onClick();
-            }}
-          >
-            <SearchIcon style={{ width: "2rem", height: "2rem " }}></SearchIcon>
-          </Button>
-        </A>
-      </Link>
+        <SearchIcon style={{ width: "2.4rem", height: "2.4rem" }}></SearchIcon>
+      </Button>
     </Wrapper>
   );
 }
-
-const A = styled.a`
-  width: 2.4rem;
-  height: 2.4rem;
-  display: flex;
-  align-items: center;
-  position: absolute;
-  right: 3.5rem;
-  border: none;
-  background-color: transparent;
-`;
 
 const Wrapper = styled.div`
   display: flex;
@@ -83,8 +74,12 @@ const Input = styled.input`
   margin: 0 auto;
 `;
 const Button = styled.button`
+  width: 3rem;
+  height: 3rem;
   display: flex;
   align-items: center;
+  position: absolute;
+  right: 3rem;
   border: none;
   background-color: transparent;
 `;
