@@ -1,7 +1,7 @@
 import React, { useState, useEffect } from "react";
 import styled, { css } from "styled-components";
 import { useRouter } from "next/router";
-
+import Text from "../atoms/text";
 import ErrorImage from "../atoms/icon/curious-doctor";
 import TextBox from "../molecules/text-box/show-selected";
 import Filter from "../organisms/Tab/filter";
@@ -36,12 +36,15 @@ export default function searchResult() {
         <TextBox selected={router.query.keyword}></TextBox>
       </BoxWrapper>
 
-      {!isLoading && !data && (
+      {data && data.length == 0 && (
         <ErrorWrapper>
           <ErrorImage
             style={{ width: "10.7rem", height: "11.5rem" }}
             fill="#3446d4"
           ></ErrorImage>
+          <Text level={5} spacing="-0.056rem" align="center" color="#3446d4">
+            Sorry, no related search results. Please check your search again.
+          </Text>
         </ErrorWrapper>
       )}
       {data && (
@@ -96,5 +99,11 @@ const BoxWrapper = styled.div`
 `;
 
 const ErrorWrapper = styled.div`
-  margin: 9.4rem auto;
+  margin: 7rem auto;
+  display: flex;
+  width: 19.4rem;
+  height: 17rem;
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: center;
 `;
