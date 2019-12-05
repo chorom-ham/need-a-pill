@@ -6,12 +6,13 @@ import Box from "../../../atoms/Button/text/alphabet";
 
 export default function alphabet(props) {
   const [isClicked, setIsClicked] = useState(false);
+
   return (
     <Box
-      isClicked={isClicked}
+      isClicked={props.selected === props.alphabet}
       key={props.key}
       onClick={() => {
-        setIsClicked(!isClicked);
+        props.setSelected(props.alphabet);
       }}
     >
       <Text align="center" spacing="-0.048rem" level="4" weight="bold">
