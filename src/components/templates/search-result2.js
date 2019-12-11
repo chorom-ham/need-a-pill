@@ -51,11 +51,19 @@ export default function searchResult() {
         <div>
           {data.map((value, index) => (
             <MedicineCard
-              key={index}
-              engName={value.eng_name}
-              krName={value.kr_name}
-              effects={value.effects}
-              dosages={value.dosage}
+            key={index}
+            engName={value.eng_name}
+            krName={value.kr_name}
+            effects={
+              value.effects.length
+                ? value.effects
+                : value.effects.map(value => <Li>{value}</Li>)
+            }
+            dosages={
+              value.dosage.length
+                ? value.dosage.map(value => <Li>{value}</Li>)
+                : value.dosage
+            }
             ></MedicineCard>
           ))}
         </div>
