@@ -106,7 +106,7 @@ const bodyPartItems = [
   {
     Icon: NeckShoulder,
     size: [3.57, 2.31],
-    name: "Neck/Shoulder",
+    name: "Neck Area",
     link: "/symptom-select?keyword=Neck/Shoulder&page=2"
   },
   {

@@ -22,11 +22,11 @@ export default function bodyPartButton(props) {
         />
       </IconWrapper>
       <Text
+        width="5.6rem"
         color="#333"
         level="4"
         spacing="-0.048rem"
         align="center"
-        width="5.6rem"
       >
         {props.name}
       </Text>
@@ -43,6 +43,7 @@ const Wrapper = styled.a`
   width: fit-content;
   height: fit-content;
   cursor: pointer;
+  box-sizing: border-box;
 `;
 
 const IconWrapper = styled.button`
