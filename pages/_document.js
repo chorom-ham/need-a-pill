@@ -34,6 +34,19 @@ export default class MyDocument extends Document {
             name="viewport"
             content="width=device-width, user-scalable=no, initial-scale=1, maximum-scale=1, minimum-scale=1"
           />
+          <script
+            data-ad-client="ca-pub-5202070596232358"
+            async
+            src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"
+          ></script>
+          <script
+            dangerouslySetInnerHTML={{
+              __html: `
+            var googletag = googletag || {};
+            googletag.cmd = googletag.cmd || [];
+        `
+            }}
+          />
         </Head>
         <body>
           <Main />
