@@ -7,7 +7,7 @@ import Link from "next/link";
 import AlphabetBox from "../molecules/Button/symptom-select/alphabet";
 
 export default function alphabetical() {
-  const [closed, setClosed] = useState(false);
+  const [closed, setClosed] = useState(true);
   const [selected, setSelected] = useState("A");
 
   const getAlphabet = items => (

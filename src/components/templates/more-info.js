@@ -2,15 +2,26 @@ import React, { useState, useEffect } from "react";
 import styled, { css } from "styled-components";
 import axios from "axios";
 import TopInfo from "../organisms/medicine-top-info/medicine-top-info";
+import ImageHolder from "../atoms/image-holder/large";
 import EffectsAndDosages from "../organisms/medicine-bottom-info/effects-and-dosages";
 import MoreInformations from "../organisms/medicine-bottom-info/more-informations";
-
+import Skeleton from "../skeleton/more-info";
 import { useRouter } from "next/router";
 
 export default function MoreInfo() {
   const router = useRouter();
   const name = router.query.name;
   const [{ data, isLoading, isError }] = useDrugSearchApi(name);
+
+  if (isLoading) {
+    return (
+      <Wrapper>
+        <ImageHolder></ImageHolder>
+        <Skeleton></Skeleton>
+        <Skeleton></Skeleton>
+      </Wrapper>
+    );
+  }
 
   return (
     <Wrapper>
@@ -59,7 +70,7 @@ const useDrugSearchApi = name => {
       setIsLoading(true);
       try {
         const result = await axios(
-          `https://needapill-server.herokuapp.com/drugs/search?keyword=${name}`
+          `https://needapill-server.herokuapp.com/drugs/search?keyword=${name}&filter=`
         );
         setData(result.data);
         setIsLoading(false);
@@ -75,6 +86,10 @@ const useDrugSearchApi = name => {
 
 const Wrapper = styled.div`
   background-color: #fff;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
 `;
 
 const Li = styled.li`

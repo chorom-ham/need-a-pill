@@ -3,6 +3,7 @@ import styled from "styled-components";
 import Title from "../atoms/Button/moreButton";
 import Text from "../atoms/text";
 import SymptomBox from "../molecules/Button/symptom-select/recommended-symptom";
+import Skeleton from "../skeleton/recommended-symptom";
 import axios from "axios";
 
 export default function recommendedSymptoms(props) {
@@ -10,6 +11,25 @@ export default function recommendedSymptoms(props) {
     props.keyword,
     props.pageNum
   );
+
+  if (isLoading) {
+    return (
+      <Wrapper>
+        <Title align="left" topRadius="0.8rem">
+          <Text
+            level="4"
+            weight="bold"
+            spacing="-0.048rem"
+            color="white"
+            align="left"
+          >
+            Recommended Symptoms
+          </Text>
+        </Title>
+        <Skeleton></Skeleton>
+      </Wrapper>
+    );
+  }
 
   return (
     <Wrapper>

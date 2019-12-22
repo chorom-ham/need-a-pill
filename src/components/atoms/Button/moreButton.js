@@ -4,7 +4,6 @@ export default styled.button`
   width: 100%;
   height: 4rem;
   background-color: #3446d4;
-  box-shadow: 0 0.4rem 0.8rem 0 #e0dfe7;
   border: none;
   display: flex;
   flex-direction: row;

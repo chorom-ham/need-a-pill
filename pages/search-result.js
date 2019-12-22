@@ -13,7 +13,6 @@ export default function SearchResult() {
         <title>Need a Pill</title>
       </Head>
       <MainHeader></MainHeader>
-
       <SearchResults></SearchResults>
     </Wrapper>
   );

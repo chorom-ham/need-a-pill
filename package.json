@@ -3,19 +3,23 @@
   "version": "0.1.0",
   "private": true,
   "scripts": {
-    "dev": "next dev",
-    "build": "next build",
-    "start": "next start"
+    "dev": "copy .env.dev .env && node server",
+    "build": "cp ./.env.prod ./.env && next build",
+    "start": "cp ./.env.prod ./.env && node server"
   },
   "dependencies": {
+    "@babel/plugin-proposal-class-properties": "^7.7.4",
+    "@babel/plugin-proposal-decorators": "^7.7.4",
+    "@zeit/next-source-maps": "0.0.3",
     "axios": "^0.19.0",
+    "babel-plugin-module-resolver": "^4.0.0",
+    "babel-plugin-styled-components": "^1.10.6",
+    "dotenv": "^8.2.0",
+    "express": "^4.17.1",
     "next": "9.1.2",
     "next-ga": "^2.3.4",
     "react": "16.11.0",
     "react-dom": "16.11.0",
-    "react-google-login": "^5.0.7",
-    "react-helmet": "^5.2.1",
-    "react-meta-tags": "^0.7.4",
     "reactjs-popup": "^1.5.0",
     "styled-components": "^4.4.1"
   },

@@ -6,7 +6,7 @@ import ErrorImage from "../atoms/icon/curious-doctor";
 import SearchForm from "../molecules/Form/search";
 import Filter from "../organisms/Tab/filter";
 import MedicineCard from "../organisms/medicine-card";
-import Skeleton from "../organisms/medicine-card-skeleton";
+import Skeleton from "../skeleton/medicine-card-skeleton";
 import axios from "axios";
 
 export default function searchResult() {
