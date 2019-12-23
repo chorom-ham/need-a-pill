@@ -86,7 +86,7 @@ export default function Modal() {
                     level={2}
                     spacing="-0.032rem"
                     deco="underline"
-                    color="#3446d4"
+                    color="#b9b9ba"
                   >
                     Read More
                   </Text>
