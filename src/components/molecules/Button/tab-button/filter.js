@@ -30,6 +30,6 @@ const Button = styled.button`
   border: none;
   outline: none;
   ${props => css`
-    ${props.isSelected && "border-bottom: solid 0.1rem #3446d4;"}
+    ${props.isSelected && "border-bottom: solid 0.2rem #3446d4;"}
   `}
 `;
