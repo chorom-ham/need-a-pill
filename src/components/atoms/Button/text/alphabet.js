@@ -9,7 +9,7 @@ export default styled.button`
   ${props => css`
     ${props.isClicked
       ? "background-color: #3446d4"
-      : "background-color: #ececf0"}
+      : "background-color: #ececf0"};
     ${props.isClicked ? "color: #fff" : "color: #333"}
   `}
 `;

@@ -112,7 +112,7 @@ const useAlphabetSymptomsSearchApi = char => {
 
 const ResultWrapper = styled.div`
   background-color: transparent;
-  border-top:0.2rem solid #ececf0
+  border-top: 0.2rem solid #ececf0;
   width: 31.2rem;
   display: flex;
   flex-direction: column;
