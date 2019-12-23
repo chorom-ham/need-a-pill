@@ -73,7 +73,6 @@ export default function searchResult() {
       )}
       {data && (
         <div>
-          {console.log(data)}
           {data.map((value, index) => (
             <MedicineCard
               key={index}
