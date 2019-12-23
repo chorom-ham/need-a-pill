@@ -6,7 +6,9 @@ import Text from "../../atoms/text";
 export default function MedicineTopInfo(props) {
   return (
     <Wrapper>
-      <ImageHolder></ImageHolder>
+      <ImageHolder>
+        <img src={props.img} width="100%" height="100%" />
+      </ImageHolder>
 
       <Text
         level={6}

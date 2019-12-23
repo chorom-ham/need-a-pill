@@ -77,6 +77,7 @@ export default function searchResult() {
           {data.map((value, index) => (
             <MedicineCard
               key={index}
+              img={value.img_url}
               engName={value.eng_name}
               krName={value.kr_name}
               effects={
@@ -120,7 +121,7 @@ const useDrugSearchApi = (initialSearch, initialFilter, initialPageNum) => {
       }
     };
     fetchData();
-  }, [search]);
+  }, [search, filter]);
 
   return [{ data, isLoading, isError }, setSearch];
 };

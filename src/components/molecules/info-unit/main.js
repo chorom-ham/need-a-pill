@@ -7,11 +7,7 @@ export default function main(props) {
   return (
     <Wrapper>
       <ImageHolder>
-        <img
-          width="100%"
-          height="100%"
-          src="http://www.gftory.com/wp/wp-content/uploads/2016/02/%EC%BD%94%EB%A6%AC%ED%88%AC%EC%82%B4%EA%B3%A8%EB%93%9C.jpg"
-        ></img>
+        <img width="100%" height="100%" src={props.img}></img>
       </ImageHolder>
       <NameWrapper>
         <Text

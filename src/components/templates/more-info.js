@@ -31,6 +31,7 @@ export default function MoreInfo() {
             <>
               <TopInfo
                 key={index}
+                img={value.img_url}
                 engName={value.eng_name}
                 krName={value.kr_name}
               ></TopInfo>

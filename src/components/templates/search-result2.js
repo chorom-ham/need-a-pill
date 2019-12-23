@@ -70,6 +70,7 @@ export default function searchResult() {
           {data.map((value, index) => (
             <MedicineCard
               key={index}
+              img={value.img_url}
               engName={value.eng_name}
               krName={value.kr_name}
               effects={
@@ -104,7 +105,7 @@ const useSymptomSearchApi = (initialSearch, initialFilter, initialPageNum) => {
       setIsLoading(true);
       try {
         const result = await axios(
-          `https://needapill-server.herokuapp.com/drugs/symptom?keyword=${search}&filter=&page_num=${pageNum}`
+          `https://needapill-server.herokuapp.com/drugs/symptom?keyword=${search}&page_num=${pageNum}`
         );
         setData(result.data);
         setIsLoading(false);
@@ -113,10 +114,15 @@ const useSymptomSearchApi = (initialSearch, initialFilter, initialPageNum) => {
       }
     };
     fetchData();
-  }, [search]);
+  }, []);
 
   return [{ data, isLoading, isError }, setSearch];
 };
+
+const Li = styled.li`
+  list-style: none;
+  padding-left: 0px;
+`;
 
 const Wrapper = styled.div``;
 
