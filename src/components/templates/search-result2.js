@@ -104,7 +104,7 @@ const useSymptomSearchApi = (initialSearch, initialFilter, initialPageNum) => {
       setIsLoading(true);
       try {
         const result = await axios(
-          `https://needapill-server.herokuapp.com/drugs/symptom?keyword=${search}&page_num=${pageNum}`
+          `https://needapill-server.herokuapp.com/drugs/symptom?keyword=${search}&filter=&page_num=${pageNum}`
         );
         setData(result.data);
         setIsLoading(false);
