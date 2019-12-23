@@ -6,7 +6,7 @@ import { useRouter } from "next/router";
 
 function searchForm(props) {
   const [query, setQuery] = useState();
-  const filter = "Relevance";
+  const filter = "relevance";
   const page_num = 2;
   const router = useRouter();
 

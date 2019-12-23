@@ -12,7 +12,7 @@ import axios from "axios";
 export default function searchResult() {
   const [query, setQuery] = useState();
   const router = useRouter();
-  const [{ data, isLoading, isError }, doFetch] = useDrugSearchApi(
+  const [{ data, isLoading, isError }, doFetch, setFilter] = useDrugSearchApi(
     router.query.keyword,
     router.query.filter,
     router.query.page
@@ -25,7 +25,7 @@ export default function searchResult() {
           setQuery={setQuery}
           onClick={() => doFetch(query)}
         ></SearchForm>
-        <Filter></Filter>
+        <Filter setFilter={setFilter}></Filter>
         <Skeleton></Skeleton>
         <Skeleton></Skeleton>
       </Wrapper>
@@ -39,7 +39,7 @@ export default function searchResult() {
           setQuery={setQuery}
           onClick={() => doFetch(query)}
         ></SearchForm>
-        <Filter></Filter>
+        <Filter setFilter={setFilter}></Filter>
         <ErrorWrapper>
           <ErrorImage
             style={{ width: "10.7rem", height: "11.5rem" }}
@@ -59,7 +59,7 @@ export default function searchResult() {
         setQuery={setQuery}
         onClick={() => doFetch(query)}
       ></SearchForm>
-      <Filter></Filter>
+      <Filter setFilter={setFilter}></Filter>
       {data && data.length == 0 && (
         <ErrorWrapper>
           <ErrorImage
@@ -123,7 +123,7 @@ const useDrugSearchApi = (initialSearch, initialFilter, initialPageNum) => {
     fetchData();
   }, [search, filter]);
 
-  return [{ data, isLoading, isError }, setSearch];
+  return [{ data, isLoading, isError }, setSearch, setFilter];
 };
 
 const Wrapper = styled.div``;
