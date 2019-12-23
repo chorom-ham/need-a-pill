@@ -11,5 +11,6 @@ export default styled.p`
     letter-spacing: ${props.spacing};
     margin: 0;
     padding: 0;
+    text-decoration: ${props.deco};
   `}
 `;
