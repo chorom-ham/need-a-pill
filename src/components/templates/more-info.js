@@ -44,7 +44,7 @@ export default function MoreInfo() {
                 key={index + 2}
                 description={value.description}
                 substance={value.substances.map(value => (
-                  <Li>{value.name + " " + value.amount + "mg"}</Li>
+                  <Li>{value.name + " " + value.amount}</Li>
                 ))}
                 preservation={value.preservation}
                 packaging={value.packaging}
