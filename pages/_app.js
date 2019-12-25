@@ -106,7 +106,6 @@ const BestWrapper = styled.div`
   display: flex;
   flex-direction: row;
   min-height: 100%;
-  height: 100%;
   background-color: #fff;
 `;
 
