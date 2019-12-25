@@ -58,6 +58,7 @@ const Wrapper = styled.div`
   display: flex;
   align-items: center;
   justify-content: center;
+  box-sizing: border-box;
 `;
 const Input = styled.input`
   width: 31.2rem;
@@ -76,10 +77,12 @@ const Button = styled.button`
   display: flex;
   align-items: center;
   position: absolute;
-  right: 3rem;
+  right: 9%;
   border: none;
   background-color: transparent;
   padding: 0;
+  flex-direction: column;
+  justify-content: center;
 `;
 
 export default searchForm;
