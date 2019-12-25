@@ -79,6 +79,7 @@ const Button = styled.button`
   right: 3rem;
   border: none;
   background-color: transparent;
+  padding: 0;
 `;
 
 export default searchForm;
