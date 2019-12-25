@@ -37,8 +37,16 @@ export default function MoreInfo() {
               ></TopInfo>
               <EffectsAndDosages
                 key={index + 1}
-                effects={value.effects}
-                dosages={value.dosage}
+                effects={
+                  value.effects.length
+                    ? value.effects
+                    : value.effects.map(value => <Li>{value}</Li>)
+                }
+                dosages={
+                  value.dosage.length
+                    ? value.dosage.map(value => <Li>{value}</Li>)
+                    : value.dosage
+                }
               ></EffectsAndDosages>
               <MoreInformations
                 key={index + 2}
