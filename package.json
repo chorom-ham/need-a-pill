@@ -18,6 +18,7 @@
     "express": "^4.17.1",
     "next": "9.1.2",
     "next-ga": "^2.3.4",
+    "quagga": "^0.12.1",
     "react": "16.11.0",
     "react-dom": "16.11.0",
     "reactjs-popup": "^1.5.0",
