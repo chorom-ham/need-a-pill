@@ -48,7 +48,7 @@ function searchForm(props) {
           }
         }}
       >
-        <SearchIcon style={{ width: "100%", height: "100%" }}></SearchIcon>
+        <SearchIcon style={{ width: "2.4rem", height: "2.4rem" }}></SearchIcon>
       </Button>
     </Wrapper>
   );
@@ -73,8 +73,6 @@ const Input = styled.input`
   margin: 0 auto;
 `;
 const Button = styled.button`
-  width: 3rem;
-  height: 3rem;
   display: flex;
   align-items: center;
   position: absolute;
