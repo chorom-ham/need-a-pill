@@ -13,7 +13,6 @@ export default function SearchResult() {
         <title>Need a Pill</title>
       </Head>
       <MainHeader></MainHeader>
-
       <SearchResults></SearchResults>
     </Wrapper>
   );
@@ -21,4 +20,6 @@ export default function SearchResult() {
 
 const Wrapper = styled.div`
   background-color: #fff;
+  display: flex;
+  flex-direction: column;
 `;
