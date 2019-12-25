@@ -48,7 +48,7 @@ function searchForm(props) {
           }
         }}
       >
-        <SearchIcon style={{ width: "2.4rem", height: "2.4rem" }}></SearchIcon>
+        <SearchIcon style={{ width: "100%", height: "100%" }}></SearchIcon>
       </Button>
     </Wrapper>
   );
@@ -57,7 +57,6 @@ function searchForm(props) {
 const Wrapper = styled.div`
   display: flex;
   align-items: center;
-  width: 100%;
   justify-content: center;
 `;
 const Input = styled.input`
