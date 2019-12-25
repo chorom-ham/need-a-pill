@@ -22,7 +22,7 @@ export default function bodyPartButton(props) {
         />
       </IconWrapper>
       <Text
-        width="5.6rem"
+        width="5.7rem"
         color="#333"
         level="4"
         spacing="-0.048rem"
