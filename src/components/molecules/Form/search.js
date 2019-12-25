@@ -3,6 +3,7 @@ import Link from "next/link";
 import styled, { css } from "styled-components";
 import SearchIcon from "../../atoms/Button/icon/search";
 import { useRouter } from "next/router";
+import BarcodeIcon from "../../atoms/Button/icon/barcode";
 
 function searchForm(props) {
   const [query, setQuery] = useState();
@@ -35,7 +36,13 @@ function searchForm(props) {
           }
         }}
       ></Input>
-      <Button
+      <BarcodeButton>
+        <BarcodeIcon
+          style={{ width: "2.4rem", height: "2.4rem" }}
+          fill="#333"
+        ></BarcodeIcon>
+      </BarcodeButton>
+      <SearchButton
         onClick={() => {
           if (query != undefined) {
             if (query != undefined) {
@@ -48,8 +55,11 @@ function searchForm(props) {
           }
         }}
       >
-        <SearchIcon style={{ width: "2.4rem", height: "2.4rem" }}></SearchIcon>
-      </Button>
+        <SearchIcon
+          style={{ width: "2.4rem", height: "2.4rem" }}
+          fill="#333"
+        ></SearchIcon>
+      </SearchButton>
     </Wrapper>
   );
 }
@@ -73,11 +83,23 @@ const Input = styled.input`
   font-size: 1.2rem;
   margin: 0 auto;
 `;
-const Button = styled.button`
+const SearchButton = styled.button`
   display: flex;
   align-items: center;
   position: absolute;
   right: 9%;
+  border: none;
+  background-color: transparent;
+  padding: 0;
+  flex-direction: column;
+  justify-content: center;
+`;
+
+const BarcodeButton = styled.button`
+  display: flex;
+  align-items: center;
+  position: absolute;
+  right: 16%;
   border: none;
   background-color: transparent;
   padding: 0;
