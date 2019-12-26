@@ -42,7 +42,7 @@ export default class MyDocument extends Document {
           <meta property="og:description" content={siteDescription} />
           <meta
             property="og:image"
-            content="https://lithub.com/wp-content/uploads/2019/03/pills.jpg"
+            content="https://postfiles.pstatic.net/MjAxOTEyMjZfMTU5/MDAxNTc3MzU5OTU4NDUz.2C_4Rk4BGx2GMNimVoCAgZqHzo2QQD17OqmFcx3oabwg.3DK7Jt-lWD_asA1rB493l1I_TKg1ZrmvCeGXhEKze6Ug.PNG.yadongbihs/image.png?type=w966"
           />
           <script
             data-ad-client="ca-pub-5202070596232358"
