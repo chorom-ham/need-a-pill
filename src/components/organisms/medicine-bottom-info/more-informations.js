@@ -71,7 +71,7 @@ const Wrapper = styled.div`
 `;
 
 const CardWrapper = styled.div`
-  width: 31.2rem
+  width: 31.2rem;
   background-color: white;
   box-shadow: 0 0.4rem 0.8rem 0 #e0dfe7;
   box-sizing: border-box;
