@@ -5,6 +5,7 @@ import Logo from "../atoms/icon/logo";
 import Ministry from "../atoms/icon/ministry";
 import Text from "../atoms/text";
 import CloseBtn from "../atoms/Button/popup";
+import Cookies from "js-cookie";
 
 export default function Modal() {
   const [showMore, setShowMore] = useState(false);
@@ -13,7 +14,7 @@ export default function Modal() {
     <Popup
       modal={true}
       lockScroll={true}
-      defaultOpen={true}
+      defaultOpen={Cookies.get() ? false : true}
       closeOnDocumentClick={false}
       position="right center"
       contentStyle={contentStyle}
@@ -140,6 +141,7 @@ export default function Modal() {
           <CloseBtn
             color="#3446d4"
             onClick={() => {
+              Cookies.set("cookie", "cookie", { expires: 1 });
               close();
             }}
           >

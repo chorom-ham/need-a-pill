@@ -16,6 +16,7 @@
     "babel-plugin-styled-components": "^1.10.6",
     "dotenv": "^8.2.0",
     "express": "^4.17.1",
+    "js-cookie": "^2.2.1",
     "next": "9.1.2",
     "next-ga": "^2.3.4",
     "quagga": "^0.12.1",
