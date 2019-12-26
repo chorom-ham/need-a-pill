@@ -14,7 +14,7 @@ export default function Modal() {
     <Popup
       modal={true}
       lockScroll={true}
-      defaultOpen={Cookies.get() ? false : true}
+      defaultOpen={!Cookies.get("cookie") ? true : false}
       closeOnDocumentClick={false}
       position="right center"
       contentStyle={contentStyle}
