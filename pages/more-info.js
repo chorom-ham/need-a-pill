@@ -19,4 +19,6 @@ export default function BeforeSearch() {
 
 const Wrapper = styled.div`
   background-color: #fff;
+  display: flex;
+  flex-direction:column;
 `;
