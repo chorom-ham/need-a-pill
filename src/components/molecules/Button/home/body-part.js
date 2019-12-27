@@ -6,19 +6,14 @@ export default function bodyPartButton(props) {
   const [isClicked, setIsClicked] = useState(false);
 
   return (
-    <Wrapper
-      href={props.link}
-      onClick={() => {
-        setIsClicked(!isClicked);
-      }}
-    >
-      <IconWrapper isClicked={isClicked}>
+    <Wrapper href={props.link} onClick={props.onClick}>
+      <IconWrapper isClicked={props.selected === props.name}>
         <props.Icon
           style={{
             width: `${props.width}rem`,
             height: `${props.height}rem`
           }}
-          fill={isClicked ? "#fff" : "#3446d4"}
+          fill={props.selected === props.name ? "#fff" : "#3446d4"}
         />
       </IconWrapper>
       <Text

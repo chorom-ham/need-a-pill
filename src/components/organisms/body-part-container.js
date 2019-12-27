@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useState } from "react";
 import styled, { css } from "styled-components";
 import BodyPartButton from "../molecules/Button/home/body-part";
 
@@ -24,31 +24,34 @@ import MenstrualPain from "../atoms/Button/icon/body-part/menstrual-pain";
 import Hand from "../atoms/Button/icon/body-part/hand";
 
 export default function bodyPartContainer() {
+  const [selected, setSelected] = useState("");
+
+  const getBodyPart = items => (
+    <>
+      <ButtonRow>{items.slice(0, 4).map(getButton)}</ButtonRow>
+      <ButtonRow>{items.slice(4, 8).map(getButton)}</ButtonRow>
+      <ButtonRow>{items.slice(8, 12).map(getButton)}</ButtonRow>
+      <ButtonRow>{items.slice(12, 16).map(getButton)}</ButtonRow>
+      <ButtonRow>{items.slice(16, 20).map(getButton)}</ButtonRow>
+    </>
+  );
+
+  const getButton = (item, index) => {
+    return (
+      <BodyPartButton
+        key={index}
+        Icon={item.Icon}
+        width={item.size[0]}
+        height={item.size[1]}
+        link={item.link}
+        name={item.name}
+        selected={selected}
+        onClick={() => setSelected(item.name)}
+      />
+    );
+  };
   return <Wrapper>{getBodyPart(bodyPartItems)}</Wrapper>;
 }
-
-const getBodyPart = items => (
-  <>
-    <ButtonRow>{items.slice(0, 4).map(getButton)}</ButtonRow>
-    <ButtonRow>{items.slice(4, 8).map(getButton)}</ButtonRow>
-    <ButtonRow>{items.slice(8, 12).map(getButton)}</ButtonRow>
-    <ButtonRow>{items.slice(12, 16).map(getButton)}</ButtonRow>
-    <ButtonRow>{items.slice(16, 20).map(getButton)}</ButtonRow>
-  </>
-);
-
-const getButton = (item, index) => {
-  return (
-    <BodyPartButton
-      key={index}
-      Icon={item.Icon}
-      width={item.size[0]}
-      height={item.size[1]}
-      link={item.link}
-      name={item.name}
-    />
-  );
-};
 
 const Wrapper = styled.div`
   display: flex;
