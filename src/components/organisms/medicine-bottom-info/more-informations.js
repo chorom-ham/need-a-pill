@@ -45,7 +45,7 @@ export default function MoreInformations(props) {
             />
             <InfoUnit
               color="#b9b9ba"
-              title="Last Date of Usage Manual Modification"
+              title="Date of Approval"
               content={props.lastDate}
             />
             <InfoUnit
