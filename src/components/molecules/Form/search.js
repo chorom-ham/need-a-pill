@@ -37,7 +37,7 @@ function searchForm(props) {
       ></Input>
       <Button
         onClick={() => {
-          if (query != undefined) {
+          if (query != "") {
             if (query != undefined) {
               if (props.onClick) props.onClick();
               else
