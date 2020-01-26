@@ -12,4 +12,5 @@ export default styled.div`
   background-color: #ececf0;
   display: flex;
   align-items: center;
+  justify-content: center;
 `;
