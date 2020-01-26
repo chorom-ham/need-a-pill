@@ -7,9 +7,14 @@ export default function MedicineTopInfo(props) {
   return (
     <Wrapper>
       <ImageHolder>
-        <img src={props.img} width="100%" height="100%" />
+        {props.img ? (
+          <img width="100%" height="100%" src={props.img}></img>
+        ) : (
+          <Text level={5} align="center">
+            No Image Available
+          </Text>
+        )}
       </ImageHolder>
-
       <Text
         level={6}
         weight="bold"

@@ -10,4 +10,6 @@ export default styled.div`
   border: solid 0.1rem #ececf0;
   margin: auto 2rem;
   background-color: #ececf0;
+  display: flex;
+  align-items: center;
 `;

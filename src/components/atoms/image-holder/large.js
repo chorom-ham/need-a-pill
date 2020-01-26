@@ -9,4 +9,7 @@ export default styled.div`
   box-shadow: 0 0.4rem 0.8rem 0 #e0dfe7;
   margin: 2rem auto;
   background-color: #ececf0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
 `;

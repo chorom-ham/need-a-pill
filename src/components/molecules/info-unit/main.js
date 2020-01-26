@@ -7,7 +7,13 @@ export default function main(props) {
   return (
     <Wrapper>
       <ImageHolder>
-        <img width="100%" height="100%" src={props.img}></img>
+        {props.img ? (
+          <img width="100%" height="100%" src={props.img}></img>
+        ) : (
+          <Text level={3} align="center">
+            No Image Available
+          </Text>
+        )}
       </ImageHolder>
       <NameWrapper>
         <Text
