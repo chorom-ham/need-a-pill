@@ -4,7 +4,7 @@ import axios from "axios";
 import TopInfo from "../organisms/medicine-top-info/medicine-top-info";
 import ImageHolder from "../atoms/image-holder/large";
 import EffectsAndDosages from "../organisms/medicine-bottom-info/effects-and-dosages";
-import MoreInformations from "../organisms/medicine-bottom-info/more-informations";
+import MoreInformation from "../organisms/medicine-bottom-info/more-information";
 import Skeleton from "../skeleton/more-info";
 import { useRouter } from "next/router";
 
@@ -48,7 +48,7 @@ export default function MoreInfo() {
                     : value.dosage
                 }
               ></EffectsAndDosages>
-              <MoreInformations
+              <MoreInformation
                 key={index + 2}
                 description={value.description}
                 substance={value.substances.map(value => (
@@ -59,7 +59,7 @@ export default function MoreInfo() {
                 lastDate={value.last_updated}
                 ATCCode={value.ATCcode}
                 link={value.external_link}
-              ></MoreInformations>
+              ></MoreInformation>
             </>
           ))}
         </div>
