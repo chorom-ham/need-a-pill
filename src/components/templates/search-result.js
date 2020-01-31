@@ -109,6 +109,7 @@ const useDrugSearchApi = (initialSearch, initialFilter, initialPageNum) => {
     const fetchData = async () => {
       setIsError(false);
       setIsLoading(true);
+
       try {
         const result = await axios(
           `https://needapill-server.herokuapp.com/drugs/search?keyword=${search}&filter=${filter}&page_num=${pageNum}`
