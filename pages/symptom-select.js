@@ -12,7 +12,6 @@ import { useRouter } from "next/router";
 export default function Symptom() {
   const router = useRouter();
   const keyword = router.query.keyword;
-  const pageNum = router.query.page;
 
   return (
     <Wrapper>
@@ -21,10 +20,7 @@ export default function Symptom() {
       </Head>
       <MainHeader></MainHeader>
       <TextBox selected={keyword}></TextBox>
-      <RecommendedSymptoms
-        keyword={keyword}
-        pageNum={pageNum}
-      ></RecommendedSymptoms>
+      <RecommendedSymptoms keyword={keyword}></RecommendedSymptoms>
       <Alphabetical></Alphabetical>
     </Wrapper>
   );

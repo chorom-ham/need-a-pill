@@ -9,7 +9,7 @@ export default function symptom(props) {
   return (
     <Link href={`search-result2?keyword=${props.symptom}&page=2`}>
       <A>
-        <Box key={props.key}>
+        <Box>
           <Text color="#333" align="left" spacing="-0.048rem" level="4">
             {props.symptom}
           </Text>
