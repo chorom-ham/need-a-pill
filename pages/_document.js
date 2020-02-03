@@ -2,7 +2,7 @@ import Document, { Head, Main, NextScript } from "next/document";
 import { ServerStyleSheet } from "styled-components";
 
 const siteDescription =
-  '"Needapillkr" provides information on OTC medicine YOU need when visiting Korea';
+  "Needapillkr provides information on OTC medicine YOU need when visiting Korea";
 
 export default class MyDocument extends Document {
   static async getInitialProps(ctx) {
@@ -44,6 +44,11 @@ export default class MyDocument extends Document {
             property="og:image"
             content="https://postfiles.pstatic.net/MjAxOTEyMjZfMTU5/MDAxNTc3MzU5OTU4NDUz.2C_4Rk4BGx2GMNimVoCAgZqHzo2QQD17OqmFcx3oabwg.3DK7Jt-lWD_asA1rB493l1I_TKg1ZrmvCeGXhEKze6Ug.PNG.yadongbihs/image.png?type=w966"
           />
+          <meta
+            name="naver-site-verification"
+            content="c1d49792ce9d0ac48e7ebc41fe63b4060490c2e4"
+          />
+          <link rel="canonical" href="https://needapillkr.com/index"></link>
           <script
             data-ad-client="ca-pub-5202070596232358"
             async
