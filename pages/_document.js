@@ -2,7 +2,7 @@ import Document, { Head, Main, NextScript } from "next/document";
 import { ServerStyleSheet } from "styled-components";
 
 const siteDescription =
-  "Needapill is a service for foreigners residing in Korea who are in need of medicinal information.";
+  '"Needapillkr" provides information on OTC medicine YOU need when visiting Korea';
 
 export default class MyDocument extends Document {
   static async getInitialProps(ctx) {
