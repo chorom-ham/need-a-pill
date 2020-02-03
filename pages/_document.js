@@ -48,6 +48,10 @@ export default class MyDocument extends Document {
             name="naver-site-verification"
             content="c1d49792ce9d0ac48e7ebc41fe63b4060490c2e4"
           />
+          <meta
+            name="naver-site-verification"
+            content="3ea05ed2aa4dd196b25557ca12aff0ac8a6202ae"
+          />
           <link rel="canonical" href="https://needapillkr.com/index"></link>
           <script
             data-ad-client="ca-pub-5202070596232358"
