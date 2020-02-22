@@ -22,6 +22,7 @@
     "quagga": "^0.12.1",
     "react": "16.11.0",
     "react-dom": "16.11.0",
+    "react-google-login": "^5.1.1",
     "reactjs-popup": "^1.5.0",
     "styled-components": "^4.4.1"
   },

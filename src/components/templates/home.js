@@ -22,7 +22,6 @@ export default function Home() {
           setShow(!show);
         }}
       ></ShowBodyPart>
-
       {show && <BodyPartContainer></BodyPartContainer>}
     </Wrapper>
   );
