@@ -7,7 +7,9 @@ import CommentNum from "../molecules/brief-post/comment";
 export default function BriefPost() {
   return (
     <Wrapper>
-      <Profile></Profile>
+      <ProfileWrapper>
+        <Profile></Profile>
+      </ProfileWrapper>
       <Text level={4} spacing="-0.036rem" color="#333">
         내용입니다. 내용입니다. 내용입니다. 내용입니다. 내용입니다. 내용입니다.
         내용입니다. 내용입니다. 내용입니다.
@@ -27,6 +29,12 @@ const Wrapper = styled.div`
   width: 100%;
   padding: 1.1rem 2rem 1.1rem 2rem;
   box-sizing: border-box;
+`;
+
+const ProfileWrapper = styled.div`
+  display: flex;
+  flex-direction: row;
+  margin-bottom: 0.8rem;
 `;
 
 const BottomWrapper = styled.div`
