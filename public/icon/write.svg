@@ -1,0 +1,43 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="2rem" height="2rem" viewBox="0 0 24 24">
+    <defs>
+        <style>
+            .cls-1,.cls-2{fill:none}.cls-2{clip-rule:evenodd}.cls-3{clip-path:url(#clip-path)}.cls-4{clip-path:url(#clip-path-2)}.cls-5{isolation:isolate}.cls-6{clip-path:url(#clip-path-3)}.cls-7{clip-path:url(#clip-path-4)}.cls-8{clip-path:url(#clip-path-5)}.cls-9{fill:#fff}
+        </style>
+        <clipPath id="clip-path">
+            <path id="패스_189" d="M14-20.586l-10 10V-8h2.586l10-10zM21-3a1 1 0 0 1 1 1 1 1 0 0 1-1 1H3a1 1 0 0 1-1-1 1 1 0 0 1 1-1h18zm-6.293-19.707l4 4a1 1 0 0 1 0 1.414l-11 11A1 1 0 0 1 7-6H3a1 1 0 0 1-1-1v-4a1 1 0 0 1 .293-.707l11-11a1 1 0 0 1 1.414 0z" class="cls-1" data-name="패스 189"/>
+        </clipPath>
+        <clipPath id="clip-path-2">
+            <path id="패스_188" d="M0 0h24v-24H0z" class="cls-1" data-name="패스 188"/>
+        </clipPath>
+        <clipPath id="clip-path-3">
+            <path id="사각형_259" d="M0 0h30v32H0z" class="cls-1" data-name="사각형 259" transform="translate(-3 -28)"/>
+        </clipPath>
+        <clipPath id="clip-path-4">
+            <path id="패스_184" d="M2-1h20v-22H2z" class="cls-1" data-name="패스 184"/>
+        </clipPath>
+        <clipPath id="clip-path-5">
+            <path id="패스_187" d="M0-24h24V0H0z" class="cls-2" data-name="패스 187"/>
+        </clipPath>
+    </defs>
+    <g id="그룹_1665" data-name="그룹 1665" transform="translate(151 -2322)">
+        <g id="그룹_1664" data-name="그룹 1664" transform="translate(-151 2346)">
+            <g id="그룹_1663" class="cls-3" data-name="그룹 1663">
+                <g id="그룹_1662" class="cls-4" data-name="그룹 1662">
+                    <g id="그룹_1661" class="cls-5" data-name="그룹 1661">
+                        <g id="그룹_1660" class="cls-6" data-name="그룹 1660">
+                            <g id="그룹_1657" class="cls-7" data-name="그룹 1657">
+                                <path id="패스_183" d="M-3-28h30V4H-3z" data-name="패스 183"/>
+                            </g>
+                            <g id="그룹_1659" class="cls-8" data-name="그룹 1659">
+                                <g id="그룹_1658" class="cls-7" data-name="그룹 1658">
+                                    <path id="패스_185" d="M-5-29h34V5H-5z" class="cls-9" data-name="패스 185"/>
+                                </g>
+                            </g>
+                        </g>
+                    </g>
+                </g>
+            </g>
+        </g>
+        <path id="사각형_260" d="M0 0h24v24H0z" class="cls-1" data-name="사각형 260" transform="translate(-151 2322)"/>
+    </g>
+</svg>
