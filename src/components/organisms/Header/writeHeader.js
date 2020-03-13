@@ -1,17 +1,21 @@
 import React from "react";
 import styled from "styled-components";
 import Text from "../../atoms/text";
-import BackButton from "../../molecules/Button/back";
+import BackButton from "../../molecules/Button/x";
+import DoneButton from "../../molecules/Button/done";
 
-function menuHeader(props) {
+function writeHeader() {
   return (
     <MenuHeaderWrapper>
       <BackButtonWrapper>
         <BackButton></BackButton>
       </BackButtonWrapper>
       <Text level={6} weight="bold" spacing="-0.064rem" color="#3446d4">
-        {props.headerText}
+        Write
       </Text>
+      <DoneButtonWrapper>
+        <DoneButton></DoneButton>
+      </DoneButtonWrapper>
     </MenuHeaderWrapper>
   );
 }
@@ -29,7 +33,12 @@ const MenuHeaderWrapper = styled.header`
 
 const BackButtonWrapper = styled.div`
   position: absolute;
-  left: 2.4rem;
+  left: 2rem;
 `;
 
-export default menuHeader;
+const DoneButtonWrapper = styled.div`
+  position: absolute;
+  right: 2rem;
+`;
+
+export default writeHeader;
