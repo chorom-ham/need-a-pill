@@ -5,14 +5,28 @@ import HomeComponents from "../src/components/templates/home";
 import Footer from "../src/components/organisms/footer";
 import styled, { css } from "styled-components";
 import Popup from "../src/components/organisms/popup";
+import Menu from "../src/components/organisms/menu";
 
 export default function Home() {
+  const [show, setShow] = useState(false);
+
   return (
     <Wrapper>
       <div>
         <Popup />
       </div>
-      <Header></Header>
+      {show && (
+        <Menu
+          buttonClick={() => {
+            setShow(false);
+          }}
+        ></Menu>
+      )}
+      <Header
+        buttonClick={() => {
+          setShow(true);
+        }}
+      ></Header>
       <HomeComponents></HomeComponents>
       <Footer></Footer>
     </Wrapper>

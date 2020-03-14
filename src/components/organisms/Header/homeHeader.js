@@ -3,10 +3,10 @@ import styled from "styled-components";
 import Button from "../../molecules/Button/menu";
 import LogIn from "../../molecules/log-in/google";
 
-function homeHeader() {
+function homeHeader(props) {
   return (
     <HomeHeaderWrapper>
-      <Button></Button>
+      <Button onClick={props.buttonClick}></Button>
       <LogIn></LogIn>
     </HomeHeaderWrapper>
   );

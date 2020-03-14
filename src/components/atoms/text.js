@@ -12,5 +12,6 @@ export default styled.p`
     margin: 0;
     padding: 0;
     text-decoration: ${props.deco};
+    font-family: "Noto Sans KR", sans-serif;
   `}
 `;
