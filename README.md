@@ -13,7 +13,7 @@
 <li> Front-end Developer : <a href=https://github.com/chorom-ham/> Chorom Ham </a> </li>
 <li> Back-end Developer : <a href=https://github.com/oobobeo/> Hanseung Lee </a> </li>
 <li> Designer : Juhwan Yoon </li>
-<li> Planner : Seonung Park, Dongyoup Kim </li>
+<li> Project Manager : Seonung Park, Dongyoup Kim </li>
 </ul>
 
 <h2>Features</h2>
