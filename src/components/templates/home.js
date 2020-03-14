@@ -4,14 +4,12 @@ import Logo from "../atoms/icon/logo";
 import Search from "../molecules/Form/search";
 import ShowBodyPart from "../molecules/Button/home/show-body-part";
 import BodyPartContainer from "../organisms/body-part-container";
-import LogIn from "../molecules/log-in/google";
 
 export default function Home() {
   const [show, setShow] = useState(false);
 
   return (
     <Wrapper show={show}>
-      <LogIn></LogIn>
       <Logo
         style={{ width: "14.5rem", height: "2.84rem", margin: "0 0 2rem 0" }}
       ></Logo>
@@ -41,6 +39,6 @@ const Wrapper = styled.div`
   justify-content: center;
   background-color: #fff;
   ${props => css`
-    ${props.show ? "margin-top:5.16rem" : "margin-top:13.5rem"}
+    ${props.show ? "margin-top:2rem" : "margin-top:7.5rem"}
   `}
 `;

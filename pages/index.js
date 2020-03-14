@@ -1,22 +1,21 @@
 import React, { useState } from "react";
 import Head from "next/head";
+import Header from "../src/components/organisms/Header/homeHeader";
 import HomeComponents from "../src/components/templates/home";
 import Footer from "../src/components/organisms/footer";
 import styled, { css } from "styled-components";
 import Popup from "../src/components/organisms/popup";
-import Cookies from "js-cookie";
 
 export default function Home() {
   return (
-    <>
+    <Wrapper>
       <div>
         <Popup />
       </div>
-      <Wrapper>
-        <HomeComponents></HomeComponents>
-        <Footer></Footer>
-      </Wrapper>
-    </>
+      <Header></Header>
+      <HomeComponents></HomeComponents>
+      <Footer></Footer>
+    </Wrapper>
   );
 }
 
