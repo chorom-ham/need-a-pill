@@ -1,3 +1,5 @@
+import React from "react";
+
 export default ({ style, fill }) => (
   <svg xmlns="http://www.w3.org/2000/svg" style={style}>
     <defs>

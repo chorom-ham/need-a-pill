@@ -43,13 +43,13 @@ function Icon({ style, fill }) {
       </defs>
       <path fill="none" d="M0 0h20v20H0z"></path>
       <g clipPath="url(#a)" transform="translate(2.504 3.339)">
-        <g clip-path="url(#b)" transform="translate(-2.504 -3.337)">
-          <g clip-path="url(#c)" transform="translate(-2.5 -2.502)">
-            <g clip-path="url(#d)" transform="translate(5.004 5.84)">
+        <g clipPath="url(#b)" transform="translate(-2.504 -3.337)">
+          <g clipPath="url(#c)" transform="translate(-2.5 -2.502)">
+            <g clipPath="url(#d)" transform="translate(5.004 5.84)">
               <path d="M-4.173-4.173h22.538v21.7H-4.173z"></path>
             </g>
-            <g clip-path="url(#e)" transform="translate(2.5 2.502)">
-              <g clip-path="url(#d)" transform="translate(2.504 3.339)">
+            <g clipPath="url(#e)" transform="translate(2.5 2.502)">
+              <g clipPath="url(#d)" transform="translate(2.504 3.339)">
                 <path
                   fill={fill}
                   d="M-6.677-7.512h28.378v28.378H-6.677z"

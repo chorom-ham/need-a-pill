@@ -57,11 +57,11 @@ const Wrapper = styled.span`
   box-sizing: content-box;
   position: fixed;
   display: block;
-  z-index: 1;
+  z-index: 1000;
   top: 0px;
   left: 0px;
   margin: 0px;
-  width: 66.6%;
+  width: 24rem;
   height: 100%;
   background-color: #fff;
   padding-top: 4rem;
@@ -69,7 +69,7 @@ const Wrapper = styled.span`
 
 const Span = styled.span`
   position: fixed;
-  width: 33.4%;
+  width: 100%;
   height: 100%;
   background: rgba(0, 0, 0, 0.4);
   opacity: 1;
