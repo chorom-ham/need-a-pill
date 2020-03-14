@@ -6,7 +6,7 @@ import Profile from "../../molecules/brief-post/profile";
 export default function Title() {
   return (
     <Wrapper>
-      <Text level={4} spacing="-0.036rem" color="#333">
+      <Text level={4} spacing="-0.036rem" color="#333" weight={500}>
         Title Title Title
       </Text>
       <Bottom>

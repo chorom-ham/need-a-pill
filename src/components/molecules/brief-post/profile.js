@@ -7,7 +7,7 @@ export default function Profile() {
   return (
     <>
       <ImgHolder></ImgHolder>
-      <Text level={4} spacing="-0.036rem" color="#999999">
+      <Text level={4} spacing="-0.036rem" color="#999999" weight={500}>
         Name
       </Text>
     </>
