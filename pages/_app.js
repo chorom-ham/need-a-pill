@@ -3,8 +3,22 @@ import App from "next/app";
 import Head from "next/head";
 import Router from "next/router";
 import withGA from "next-ga";
-
+import withRedux from "next-redux-wrapper";
+import { Provider } from "react-redux";
+import { createStore, compose, applyMiddleware } from "redux";
+import reducer from "../src/reducers";
+import { composeWithDevTools } from "redux-devtools-extension";
 import styled, { createGlobalStyle } from "styled-components";
+
+const configureStore = (initialState, options) => {
+  const middlewares = []; // 미들웨어들을 넣으면 된다.
+  const enhancer =
+    process.env.NODE_ENV === "production"
+      ? compose(applyMiddleware(...middlewares))
+      : composeWithDevTools(applyMiddleware(...middlewares));
+  const store = createStore(reducer, initialState, enhancer);
+  return store;
+};
 
 const GlobalStyle = createGlobalStyle`
 @import url(//fonts.googleapis.com/earlyaccess/notosanskr.css);
@@ -68,9 +82,9 @@ html,
 
 class Needapill extends App {
   render() {
-    const { Component, pageProps } = this.props;
+    const { Component, pageProps, store } = this.props;
     return (
-      <>
+      <Provider store={store}>
         <GlobalStyle />
         <Head>
           <title>Need a Pill</title>
@@ -83,7 +97,7 @@ class Needapill extends App {
           </Wrapper>
           <Grey />
         </BestWrapper>
-      </>
+      </Provider>
     );
   }
 }
@@ -109,4 +123,6 @@ const BestWrapper = styled.div`
   background-color: #fff;
 `;
 
-export default withGA("UA-151446008-1", Router)(Needapill);
+export default withRedux(configureStore)(
+  withGA("UA-151446008-1", Router)(Needapill)
+);
