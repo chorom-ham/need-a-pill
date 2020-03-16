@@ -19,10 +19,12 @@
     "js-cookie": "^2.2.1",
     "next": "9.1.2",
     "next-ga": "^2.3.4",
+    "next-redux-wrapper": "^5.0.0",
     "quagga": "^0.12.1",
     "react": "16.11.0",
     "react-dom": "16.11.0",
     "react-google-login": "^5.1.1",
+    "react-redux": "^7.2.0",
     "reactjs-popup": "^1.5.0",
     "redux": "^4.0.5",
     "styled-components": "^4.4.1"
@@ -30,6 +32,7 @@
   "devDependencies": {
     "eslint": "^6.6.0",
     "eslint-config-google": "^0.14.0",
-    "eslint-plugin-react": "^7.16.0"
+    "eslint-plugin-react": "^7.16.0",
+    "redux-devtools": "^3.5.0"
   }
 }
