@@ -1,13 +1,17 @@
 import React from "react";
 import styled from "styled-components";
+import { useSelector } from "react-redux";
 import Button from "../../molecules/Button/menu";
 import LogIn from "../../molecules/log-in/google";
+import Profile from "../../organisms/profile-card";
 
 function homeHeader(props) {
+  const _state = useSelector(state => state.login);
+
   return (
     <HomeHeaderWrapper>
       <Button onClick={props.buttonClick}></Button>
-      <LogIn></LogIn>
+      {_state.isSignedIn ? <Profile></Profile> : <LogIn></LogIn>}
     </HomeHeaderWrapper>
   );
 }
