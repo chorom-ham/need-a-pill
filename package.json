@@ -8,12 +8,12 @@
     "start": "cp ./.env.prod ./.env && node server"
   },
   "dependencies": {
-    "@babel/plugin-proposal-class-properties": "^7.7.4",
-    "@babel/plugin-proposal-decorators": "^7.7.4",
+    "@babel/plugin-proposal-class-properties": "^7.8.3",
+    "@babel/plugin-proposal-decorators": "^7.8.3",
     "@zeit/next-source-maps": "0.0.3",
-    "axios": "^0.19.0",
+    "axios": "^0.19.2",
     "babel-plugin-module-resolver": "^4.0.0",
-    "babel-plugin-styled-components": "^1.10.6",
+    "babel-plugin-styled-components": "^1.10.7",
     "dotenv": "^8.2.0",
     "express": "^4.17.1",
     "js-cookie": "^2.2.1",
@@ -23,16 +23,17 @@
     "quagga": "^0.12.1",
     "react": "16.11.0",
     "react-dom": "16.11.0",
-    "react-google-login": "^5.1.1",
+    "react-google-login": "^5.1.2",
     "react-redux": "^7.2.0",
     "reactjs-popup": "^1.5.0",
     "redux": "^4.0.5",
     "styled-components": "^4.4.1"
   },
   "devDependencies": {
-    "eslint": "^6.6.0",
+    "eslint": "^6.8.0",
     "eslint-config-google": "^0.14.0",
-    "eslint-plugin-react": "^7.16.0",
-    "redux-devtools": "^3.5.0"
+    "eslint-plugin-react": "^7.19.0",
+    "redux-devtools": "^3.5.0",
+    "redux-devtools-extension": "^2.13.8"
   }
 }
