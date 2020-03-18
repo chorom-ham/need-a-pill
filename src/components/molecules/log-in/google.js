@@ -1,15 +1,12 @@
 import React, { useCallback } from "react";
 import GoogleLogin from "react-google-login";
-import { useDispatch, useSelector } from "react-redux";
+import { useDispatch } from "react-redux";
 import axios from "axios";
 
 export default function Google() {
   const dispatch = useDispatch();
-  const _state = useSelector(state => state.login);
 
   const login = useCallback(response => {
-    console.log(response);
-
     const _name = response.profileObj.name;
     const _email = response.profileObj.email;
     const _image = response.profileObj.imageUrl;

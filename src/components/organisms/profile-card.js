@@ -3,7 +3,7 @@ import { useSelector } from "react-redux";
 import Popup from "reactjs-popup";
 import styled from "styled-components";
 import Text from "../atoms/text";
-import Logout from "../molecules/log-in/logout";
+import Logout from "../molecules/log-in/google-logout";
 
 export default function ProfileCard() {
   const _state = useSelector(state => state.login);
@@ -40,7 +40,7 @@ export default function ProfileCard() {
             </Edit>
           </Col>
         </Row>
-        <Logout></Logout>
+        <Logout onClick={() => close()}></Logout>
         <A>Contact Us</A>
         <A>Privacy Statement</A>
       </Wrapper>

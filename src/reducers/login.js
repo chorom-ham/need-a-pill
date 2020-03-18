@@ -12,6 +12,9 @@ export default function reducer(state = initialState, action) {
       newStore = Object.assign({}, state, action);
       return newStore;
     }
+    case "OUT": {
+      return initialState;
+    }
     default:
       return state;
   }
