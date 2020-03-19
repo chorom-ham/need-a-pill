@@ -15,37 +15,43 @@ export default function Menu(props) {
           <X style={{ width: "2.4rem", height: "2.4rem" }} fill="#3446d4"></X>
         </XButton>
         <Link href="about">
-          <Tab>
-            <About
-              style={{ width: "2rem", height: "2rem", marginRight: "0.8rem" }}
-              fill="#333"
-            ></About>
-            <Text level={5} weight={500} spacing="-0.056rem">
-              About
-            </Text>
-          </Tab>
+          <a>
+            <Tab>
+              <About
+                style={{ width: "2rem", height: "2rem", marginRight: "0.8rem" }}
+                fill="#333"
+              ></About>
+              <Text level={5} weight={500} spacing="-0.056rem">
+                About
+              </Text>
+            </Tab>
+          </a>
         </Link>
         <Link href="notice">
-          <Tab>
-            <Notice
-              style={{ width: "2rem", height: "2rem", marginRight: "0.8rem" }}
-              fill="#333"
-            ></Notice>
-            <Text level={5} weight={500} spacing="-0.056rem">
-              Notice
-            </Text>
-          </Tab>
+          <a>
+            <Tab>
+              <Notice
+                style={{ width: "2rem", height: "2rem", marginRight: "0.8rem" }}
+                fill="#333"
+              ></Notice>
+              <Text level={5} weight={500} spacing="-0.056rem">
+                Notice
+              </Text>
+            </Tab>
+          </a>
         </Link>
         <Link href="support">
-          <Tab>
-            <Support
-              style={{ width: "2rem", height: "2rem", marginRight: "0.8rem" }}
-              fill="#333"
-            ></Support>
-            <Text level={5} weight={500} spacing="-0.056rem">
-              Support
-            </Text>
-          </Tab>
+          <a>
+            <Tab>
+              <Support
+                style={{ width: "2rem", height: "2rem", marginRight: "0.8rem" }}
+                fill="#333"
+              ></Support>
+              <Text level={5} weight={500} spacing="-0.056rem">
+                Support
+              </Text>
+            </Tab>
+          </a>
         </Link>
       </Wrapper>
       <Span></Span>
