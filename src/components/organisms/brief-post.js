@@ -3,26 +3,37 @@ import styled from "styled-components";
 import Profile from "../molecules/brief-post/profile";
 import Text from "../atoms/text";
 import CommentNum from "../molecules/brief-post/comment";
+import Link from "next/link";
+import { useRouter } from "next/router";
 
 export default function BriefPost() {
+  const router = useRouter();
   return (
-    <Wrapper>
-      <ProfileWrapper>
-        <Profile></Profile>
-      </ProfileWrapper>
-      <Text level={4} spacing="-0.036rem" color="#333">
-        내용입니다. 내용입니다. 내용입니다. 내용입니다. 내용입니다. 내용입니다.
-        내용입니다. 내용입니다. 내용입니다.
-      </Text>
-      <BottomWrapper>
-        <Text level={3} spacing="-0.03rem" color="#999">
-          2020-20-20
-        </Text>
-        <CommentNum num={10}></CommentNum>
-      </BottomWrapper>
-    </Wrapper>
+    <Link href={`article?category=${router.pathname}&id={id}`}>
+      <A>
+        <Wrapper>
+          <ProfileWrapper>
+            <Profile></Profile>
+          </ProfileWrapper>
+          <Text level={4} spacing="-0.036rem" color="#333">
+            내용입니다. 내용입니다. 내용입니다. 내용입니다. 내용입니다.
+            내용입니다. 내용입니다. 내용입니다. 내용입니다.
+          </Text>
+          <BottomWrapper>
+            <Text level={3} spacing="-0.03rem" color="#999">
+              2020-20-20
+            </Text>
+            <CommentNum num={10}></CommentNum>
+          </BottomWrapper>
+        </Wrapper>
+      </A>
+    </Link>
   );
 }
+
+const A = styled.a`
+  text-decoration: none;
+`;
 
 const Wrapper = styled.div`
   border-bottom: 0.1rem solid #ececf0;

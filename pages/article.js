@@ -1,15 +1,17 @@
 import React from "react";
 import styled from "styled-components";
-import Header from "../src/components/organisms/Header/menuHeader";
+import Header from "../src/components/organisms/Header/articleHeader";
 import Post from "../src/components/templates/article";
+import { useRouter } from "next/router";
 
 export default function Article() {
+  const router = useRouter();
+  var category = router.query.category.split("/")[1];
+  category = category.charAt(0).toUpperCase() + category.slice(1);
+
   return (
     <>
-      {
-        //이후 어디서 넘어왔는지 queryString으로 헤더 텍스트 변경
-      }
-      <Header headerText="Support"></Header>
+      <Header headerText={category}></Header>
       <Post></Post>
     </>
   );
