@@ -1,6 +1,6 @@
 import React from "react";
 
-function Icon({ style, fill }) {
+export default function Icon({ style, fill }) {
   return (
     <svg xmlns="http://www.w3.org/2000/svg" style={style}>
       <defs>
