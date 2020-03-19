@@ -1,11 +1,14 @@
-import React from "react";
+import React, { useState, useEffect } from "react";
 import styled from "styled-components";
 import Title from "../organisms/article/title";
 import Text from "../atoms/text";
 import Comment from "../organisms/article/comment";
 import Write from "../organisms/article/write-comment";
+import { useRouter } from "next/router";
 
 export default function Article() {
+  const [data, isLoading] = getPost();
+
   return (
     <Wrapper>
       <TopWrapper>
@@ -34,6 +37,30 @@ export default function Article() {
     </Wrapper>
   );
 }
+
+const getPost = () => {
+  const [data, setData] = useState(null);
+  const [isLoading, setIsLoading] = useState(false);
+  const router = useRouter();
+
+  useEffect(() => {
+    const fetchData = async () => {
+      setIsLoading(true);
+      try {
+        const result = await axios.get(
+          `https://needapill-server.herokuapp.com${router.query.category}/${router.query.id}`
+        );
+        setData(result.data);
+        setIsLoading(false);
+      } catch (error) {
+        console.error(error);
+      }
+      fetchData();
+    };
+  }, []);
+
+  return [data, isLoading];
+};
 
 const Wrapper = styled.div``;
 
