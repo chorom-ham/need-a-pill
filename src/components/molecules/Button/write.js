@@ -1,11 +1,19 @@
 import React from "react";
 import styled from "styled-components";
+import Link from "next/link";
+import { useRouter } from "next/router";
 
 export default function writeButton() {
+  const router = useRouter();
+
   return (
-    <Wrapper>
-      <img src="icon/write.svg" />
-    </Wrapper>
+    <Link href={`write?category=${router.pathname}`}>
+      <a>
+        <Wrapper>
+          <img src="icon/write.svg" />
+        </Wrapper>
+      </a>
+    </Link>
   );
 }
 

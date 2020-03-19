@@ -2,14 +2,24 @@ import React, { useState } from "react";
 import styled from "styled-components";
 import DoneButton from "../Button/done";
 import Camera from "../../atoms/Button/icon/camera";
+import { useSelector } from "react-redux";
+import Router from "next/router";
+import axios from "axios";
 
-export default function writeForm(props) {
+export default function writeForm() {
   const [imgBase64, setImgBase64] = useState(""); // 파일 base64
   const [imgFile, setImgFile] = useState(null);
+  const email = useSelector(state => state.login.email);
+
+  const postData = () => {
+    axios.post("https://needapill-server.herokuapp.com/about", {
+      author_email: { email },
+      image: { imgBase64 }
+    });
+  };
 
   const handleChangeFile = event => {
     let reader = new FileReader();
-
     reader.onloadend = () => {
       // 2. 읽기가 완료되면 아래코드가 실행됩니다.
       const base64 = reader.result;
@@ -25,13 +35,11 @@ export default function writeForm(props) {
 
   return (
     <>
-      <Form name={props.name} action={props.action} method="POST">
-        <Input type="text" value="email@naver.com" name="author_email"></Input>
-        <Input value={imgBase64} name="image"></Input>
-        <DoneButtonWrapper>
-          <DoneButton></DoneButton>
+      <Wrapper>
+        <DoneButtonWrapper onClick={() => Router.back()}>
+          <DoneButton onClick={postData}></DoneButton>
         </DoneButtonWrapper>
-      </Form>
+      </Wrapper>
       <Label>
         <Camera
           style={{
@@ -52,19 +60,10 @@ export default function writeForm(props) {
   );
 }
 
-const Form = styled.form`
+const Wrapper = styled.div`
   padding: 0 2rem 0 2rem;
   display: flex;
   flex-direction: column;
-`;
-const TitleInput = styled.input`
-  border: none;
-  padding: 1.2rem 0 1.2rem 0;
-  border-bottom: 0.1rem solid #ececf0;
-  font-size: 1.2rem;
-`;
-const Input = styled.input`
-  opacity: 1;
 `;
 
 const ImageInput = styled.input`

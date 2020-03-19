@@ -1,16 +1,11 @@
 import React from "react";
 import styled from "styled-components";
-import Router from "next/router";
 
-export default function doneButton() {
-  return (
-    <a onClick={() => Router.back()}>
-      <Wrapper type="submit" value="Done"></Wrapper>
-    </a>
-  );
+export default function doneButton(props) {
+  return <Wrapper onClick={props.onClick()}>Done</Wrapper>;
 }
 
-const Wrapper = styled.input`
+const Wrapper = styled.button`
   width: 5.9rem;
   height: 2.4rem;
   border-radius: 1.2rem;
