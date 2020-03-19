@@ -29,19 +29,19 @@ function Icon({ style }) {
           ></path>
         </clipPath>
       </defs>
-      <g clip-path="url(#a)" transform="translate(-.833 12.167)">
-        <g clip-path="url(#b)" transform="translate(.033 -12.967)">
-          <g clip-path="url(#c)" transform="translate(-4.8 -4.8)">
-            <g clip-path="url(#b)" transform="translate(4.8 4.8)">
+      <g clipPath="url(#a)" transform="translate(-.833 12.167)">
+        <g clipPath="url(#b)" transform="translate(.033 -12.967)">
+          <g clipPath="url(#c)" transform="translate(-4.8 -4.8)">
+            <g clipPath="url(#b)" transform="translate(4.8 4.8)">
               <path d="M-4-4h17.6v17.599H-4z"></path>
             </g>
-            <g clip-path="url(#d)" transform="translate(4.8 4.8)">
-              <g clip-path="url(#b)">
+            <g clipPath="url(#d)" transform="translate(4.8 4.8)">
+              <g clipPath="url(#b)">
                 <path fill="#999" d="M0 0h9.6v9.6H0z"></path>
               </g>
             </g>
-            <g clip-path="url(#d)" transform="translate(4.8 4.8)">
-              <g clip-path="url(#b)">
+            <g clipPath="url(#d)" transform="translate(4.8 4.8)">
+              <g clipPath="url(#b)">
                 <path
                   fill="none"
                   stroke="rgba(150,150,150,0.26)"
