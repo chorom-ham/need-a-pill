@@ -6,24 +6,24 @@ import CommentNum from "../molecules/brief-post/comment";
 import Link from "next/link";
 import { useRouter } from "next/router";
 
-export default function BriefPost() {
+export default function BriefPost(props) {
+  const { title, name, profile, time, comment, id } = props;
   const router = useRouter();
   return (
-    <Link href={`article?category=${router.pathname}&id={id}`}>
+    <Link href={`article?category=${router.pathname}&id=${id}`}>
       <A>
         <Wrapper>
           <ProfileWrapper>
-            <Profile></Profile>
+            <Profile name={name} image={profile}></Profile>
           </ProfileWrapper>
           <Text level={4} spacing="-0.036rem" color="#333">
-            내용입니다. 내용입니다. 내용입니다. 내용입니다. 내용입니다.
-            내용입니다. 내용입니다. 내용입니다. 내용입니다.
+            {title}
           </Text>
           <BottomWrapper>
             <Text level={3} spacing="-0.03rem" color="#999">
-              2020-20-20
+              {time}
             </Text>
-            <CommentNum num={10}></CommentNum>
+            <CommentNum num={comment}></CommentNum>
           </BottomWrapper>
         </Wrapper>
       </A>

@@ -1,6 +1,5 @@
 import React, { useState } from "react";
 import styled from "styled-components";
-import DoneButton from "../Button/done";
 import Camera from "../../atoms/Button/icon/camera";
 import { useSelector } from "react-redux";
 import Router from "next/router";
@@ -12,10 +11,17 @@ export default function writeForm() {
   const email = useSelector(state => state.login.email);
 
   const postData = () => {
-    axios.post("https://needapill-server.herokuapp.com/about", {
-      author_email: { email },
-      image: { imgBase64 }
-    });
+    if (imgBase64 != "") {
+      axios
+        .post("https://needapill-server.herokuapp.com/about", {
+          author_email: email,
+          image: imgBase64
+        })
+        .catch(function(error) {
+          console.log(error);
+        });
+      Router.back();
+    }
   };
 
   const handleChangeFile = event => {
@@ -24,7 +30,7 @@ export default function writeForm() {
       // 2. 읽기가 완료되면 아래코드가 실행됩니다.
       const base64 = reader.result;
       if (base64) {
-        setImgBase64(base64.toString().split(",")[1]); // 파일 base64 상태 업데이트
+        setImgBase64(base64.toString()); // 파일 base64 상태 업데이트
       }
     };
     if (event.target.files[0]) {
@@ -34,12 +40,8 @@ export default function writeForm() {
   };
 
   return (
-    <>
-      <Wrapper>
-        <DoneButtonWrapper onClick={() => Router.back()}>
-          <DoneButton onClick={postData}></DoneButton>
-        </DoneButtonWrapper>
-      </Wrapper>
+    <Wrapper>
+      <DoneButton onClick={postData}>Done</DoneButton>
       <Label>
         <Camera
           style={{
@@ -56,7 +58,7 @@ export default function writeForm() {
           onChange={handleChangeFile}
         ></ImageInput>
       </Label>
-    </>
+    </Wrapper>
   );
 }
 
@@ -78,7 +80,18 @@ const Label = styled.label`
   bottom: 2.4rem;
 `;
 
-const DoneButtonWrapper = styled.div`
+const DoneButton = styled.button`
+  width: 5.9rem;
+  height: 2.4rem;
+  border-radius: 1.2rem;
+  border: none;
+  background-color: #3446d4;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 1.1rem;
+  font-weight: bold;
+  color: #fff;
   position: absolute;
   top: 4.6rem;
   right: 2rem;

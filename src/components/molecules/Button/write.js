@@ -5,9 +5,14 @@ import { useRouter } from "next/router";
 
 export default function writeButton() {
   const router = useRouter();
+  var category = router.pathname;
 
   return (
-    <Link href={`write?category=${router.pathname}`}>
+    <Link
+      href={
+        category === "/about" ? "write-about" : `write?category=${category}`
+      }
+    >
       <a>
         <Wrapper>
           <img src="icon/write.svg" />

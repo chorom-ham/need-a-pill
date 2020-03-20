@@ -13,8 +13,11 @@ const handle = app.getRequestHandler();
 
 const compression = require("compression");
 
+const cors = require("cors");
+
 app.prepare().then(() => {
   const server = express();
+  server.use(cors());
   server.use(compression()); // adding gzip compression
 
   server.get("*", (req, res) => {

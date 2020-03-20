@@ -1,7 +1,7 @@
 import React from "react";
 import styled from "styled-components";
 import Text from "../../atoms/text";
-import BackButton from "../../molecules/Button/back";
+import BackButton from "../../molecules/Button/back-home";
 
 function menuHeader(props) {
   return (

@@ -1,19 +1,35 @@
-import React from "react";
+import React, { useState } from "react";
 import styled from "styled-components";
 import Up from "../../atoms/Button/icon/comment-up";
+import { useSelector } from "react-redux";
+import axios from "axios";
+import { useRouter } from "next/router";
 
 export default function Comment() {
+  const state = useSelector(state => state.login);
+  const router = useRouter();
+  const [body, setBody] = useState("");
+
+  const submit = () =>
+    (axios.post(
+      `https://needapill-server.herokuapp.com${router.query.category}/${router.query.id}/comment`
+    ),
+    { author: state.email, body: body }).catch(function(error) {
+      console.log(error);
+    });
+
   return (
     <Wrapper>
       <div>
-        <Profile></Profile>
+        <Profile name={state.name} image={state.profile_pic}></Profile>
       </div>
       <Form>
         <Input
           type="text"
           placeholder="Please write down your comment."
+          onChange={e => setBody(e.target.value)}
         ></Input>
-        <Submit>
+        <Submit onClick={submit}>
           <Up fill="#fff" style={{ width: "0.93rem", height: "1.2rem" }}></Up>
         </Submit>
       </Form>

@@ -7,10 +7,7 @@ export default function About() {
   return (
     <>
       <Header></Header>
-      <Form
-        name="about"
-        action="https://needapill-server.herokuapp.com/about"
-      ></Form>
+      <Form></Form>
     </>
   );
 }

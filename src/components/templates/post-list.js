@@ -10,8 +10,21 @@ export default function postList() {
     <>
       {console.log(data)}
       <Post></Post>
-      <Post></Post>
-      <Post></Post>
+      {data && !isLoading && (
+        <div>
+          {data.posts.map((value, index) => (
+            <Post
+              key={index}
+              id={value.id}
+              title={value.title}
+              name={value.author_name}
+              profile={value.author_image}
+              time={value.created_at}
+              comment={value.comment_num}
+            ></Post>
+          ))}
+        </div>
+      )}
     </>
   );
 }
@@ -33,8 +46,8 @@ const getPost = () => {
       } catch (error) {
         console.error(error);
       }
-      fetchData();
     };
+    fetchData();
   }, []);
 
   return [data, isLoading];

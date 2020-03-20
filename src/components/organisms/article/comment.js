@@ -2,23 +2,24 @@ import React from "react";
 import styled from "styled-components";
 import Text from "../../atoms/text";
 
-export default function Comment() {
+export default function Comment(props) {
   return (
     <Wrapper>
       <Col>
-        <Profile></Profile>
+        <Profile>
+          <Img src={props.img}></Img>
+        </Profile>
       </Col>
       <Col>
         <Text level={4} weight={500} spacing="-0.036rem">
-          Name Name
+          {props.name}
         </Text>
         <Text level={4} spacing="-0.036rem">
-          Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec
-          fermentum aliquam nibh at gravida.
+          {props.body}
         </Text>
         <Row>
           <Text level={3} color="#999">
-            2020-20-20
+            {props.time}
           </Text>
           <Button>...</Button>
         </Row>
@@ -52,6 +53,8 @@ const Profile = styled.div`
   border-radius: 1.6rem;
   margin-right: 0.8rem;
 `;
+
+const Img = styled.img``;
 
 const Bottom = styled.div`
   display: flex;

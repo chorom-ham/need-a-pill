@@ -3,17 +3,17 @@ import styled from "styled-components";
 import Text from "../../atoms/text";
 import Profile from "../../molecules/brief-post/profile";
 
-export default function Title() {
+export default function Title(props) {
   return (
     <Wrapper>
       <Text level={4} spacing="-0.036rem" color="#333" weight={500}>
-        Title Title Title
+        {props.title}
       </Text>
       <Bottom>
-        <Profile></Profile>
+        <Profile image={props.image} name={props.name}></Profile>
         <Right>
           <Text level={3} color="#999">
-            2020-20-20
+            {props.time}
           </Text>
           <Button>...</Button>
         </Right>

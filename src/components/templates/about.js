@@ -6,11 +6,18 @@ import axios from "axios";
 
 export default function About() {
   const [data, isLoading] = getPost();
+  console.log(data);
   return (
     <>
-      {console.log(data)}
-      <Post></Post>
-      <Post></Post>
+      {data && !isLoading && (
+        <div>
+          {data.posts.map((value, index) => (
+            <Post key={index}>
+              <Img src={value.image} />
+            </Post>
+          ))}
+        </div>
+      )}
     </>
   );
 }
@@ -31,9 +38,11 @@ const getPost = () => {
       } catch (error) {
         console.error(error);
       }
-      fetchData();
     };
+    fetchData();
   }, []);
 
   return [data, isLoading];
 };
+
+const Img = styled.img``;
