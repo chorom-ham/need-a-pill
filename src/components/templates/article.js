@@ -5,6 +5,7 @@ import Text from "../atoms/text";
 import Comment from "../organisms/article/comment";
 import Write from "../organisms/article/write-comment";
 import { useRouter } from "next/router";
+import axios from "axios";
 
 export default function Article() {
   const [data, isLoading] = getPost();
