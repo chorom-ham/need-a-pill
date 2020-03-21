@@ -61,6 +61,7 @@ const Profile = styled.div`
   background-color: #999;
   border-radius: 1.4rem;
   margin-right: 0.8rem;
+  overflow: hidden;
 `;
 
 const Form = styled.div`
@@ -85,4 +86,7 @@ const Submit = styled.button`
   border: none;
 `;
 
-const Img = styled.img``;
+const Img = styled.img`
+  width: 100%;
+  height: 100%;
+`;

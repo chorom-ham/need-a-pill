@@ -30,6 +30,7 @@ export default function Article() {
                 <Text level={4} spacing="-0.036rem" color="#333">
                   {data.body}
                 </Text>
+                {data.image && <Img src={data.image}></Img>}
               </TextWrapper>
             </TopWrapper>
             <BottomWrapper>
@@ -55,8 +56,6 @@ const getPost = () => {
   const [data, setData] = useState(null);
   const [isLoading, setIsLoading] = useState(false);
   const router = useRouter();
-  const url = `https://needapill-server.herokuapp.com${router.query.category}/${router.query.id}`;
-  console.log(url);
 
   useEffect(() => {
     const fetchData = async () => {
@@ -89,3 +88,8 @@ const TextWrapper = styled.div`
 `;
 
 const BottomWrapper = styled.div``;
+
+const Img = styled.img`
+  width: 32rem;
+  margin-top: 0.4rem;
+`;
