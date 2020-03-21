@@ -29,7 +29,10 @@ function searchForm(props) {
               if (props.onClick) props.onClick();
               else
                 router.push(
-                  `/search-result?keyword=${query}&filter=${filter}&page=${page_num}`
+                  `/search-result?keyword=${query.replace(
+                    /%/,
+                    "%25"
+                  )}&filter=${filter}&page=${page_num}`
                 );
             }
           }
@@ -40,10 +43,14 @@ function searchForm(props) {
           if (query != "") {
             if (query != undefined) {
               if (props.onClick) props.onClick();
-              else
+              else {
                 router.push(
-                  `/search-result?keyword=${query}&filter=${filter}&page=${page_num}`
+                  `/search-result?keyword=${query.replace(
+                    /%/,
+                    "%25"
+                  )}&filter=${filter}&page=${page_num}`
                 );
+              }
             }
           }
         }}

@@ -8,7 +8,7 @@ import styled from "styled-components";
 function ReadMore(props) {
   return (
     <>
-      <Link href={`more-info?name=${props.engName}`}>
+      <Link href={`more-info?name=${props.engName.split("%")[0]}`}>
         <A>
           <MoreButton justify="center" align="center" bottomRadius="0.8rem">
             <Text
