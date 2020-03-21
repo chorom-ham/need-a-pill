@@ -9,6 +9,14 @@ export default function writeButton() {
   var category = router.pathname;
   const state = useSelector(state => state.login);
 
+  if (!state.isSignedIn) {
+    return (
+      <Wrapper onClick={() => alert("You must be logged in to write.")}>
+        <img src="icon/write.svg" />
+      </Wrapper>
+    );
+  }
+
   return (
     <>
       {state.isSignedIn && (

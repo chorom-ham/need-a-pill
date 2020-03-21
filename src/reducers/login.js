@@ -5,17 +5,19 @@ export const initialState = {
   profile_pic: ""
 };
 
-export default function reducer(state = initialState, action) {
-  var newStore;
+export default function reducer(state, action) {
+  var newState;
   switch (action.type) {
     case "IN": {
-      newStore = Object.assign({}, state, action);
-      return newStore;
+      newState = Object.assign({}, state, action);
+      return newState;
     }
     case "OUT": {
       return initialState;
     }
-    default:
-      return state;
+    default: {
+      if (state === undefined) return initialState;
+      else return state;
+    }
   }
 }

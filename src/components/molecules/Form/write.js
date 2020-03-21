@@ -21,12 +21,10 @@ export default function writeForm() {
         author_email: email,
         image: imgBase64
       })
-      .then(function(response) {
-        console.log(response);
-      })
       .catch(function(error) {
         console.log(error);
       });
+    router.push(`${router.query.category}`);
   };
 
   const handleChangeFile = event => {

@@ -55,6 +55,8 @@ const getPost = () => {
   const [data, setData] = useState(null);
   const [isLoading, setIsLoading] = useState(false);
   const router = useRouter();
+  const url = `https://needapill-server.herokuapp.com${router.query.category}/${router.query.id}`;
+  console.log(url);
 
   useEffect(() => {
     const fetchData = async () => {
