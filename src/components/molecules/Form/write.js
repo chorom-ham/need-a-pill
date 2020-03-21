@@ -90,10 +90,12 @@ const TitleInput = styled.input`
   border-bottom: 0.1rem solid #ececf0;
   font-size: 1.2rem;
 `;
-const Input = styled.input`
+const Input = styled.textarea`
   border: none;
   padding: 1.2rem 0 1.2rem 0;
   font-size: 1.2rem;
+  height: 40rem;
+  font-family: "Noto Sans KR", sans-serif;
 `;
 
 const ImageInput = styled.input`
