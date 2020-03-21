@@ -2,23 +2,29 @@ import React from "react";
 import styled from "styled-components";
 import Link from "next/link";
 import { useRouter } from "next/router";
+import { useSelector } from "react-redux";
 
 export default function writeButton() {
   const router = useRouter();
   var category = router.pathname;
+  const state = useSelector(state => state.login);
 
   return (
-    <Link
-      href={
-        category === "/about" ? "write-about" : `write?category=${category}`
-      }
-    >
-      <a>
-        <Wrapper>
-          <img src="icon/write.svg" />
-        </Wrapper>
-      </a>
-    </Link>
+    <>
+      {state.isSignedIn && (
+        <Link
+          href={
+            category === "/about" ? "write-about" : `write?category=${category}`
+          }
+        >
+          <a>
+            <Wrapper>
+              <img src="icon/write.svg" />
+            </Wrapper>
+          </a>
+        </Link>
+      )}
+    </>
   );
 }
 

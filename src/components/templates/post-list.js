@@ -6,16 +6,19 @@ import { useRouter } from "next/router";
 
 export default function postList() {
   const [data, isLoading] = getPost();
+
+  if (isLoading) {
+    return <p>Loading...</p>;
+  }
+
   return (
     <>
-      {console.log(data)}
-      <Post></Post>
       {data && !isLoading && (
         <div>
           {data.posts.map((value, index) => (
             <Post
               key={index}
-              id={value.id}
+              _id={value._id}
               title={value.title}
               name={value.author_name}
               profile={value.author_image}

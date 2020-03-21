@@ -10,34 +10,44 @@ import axios from "axios";
 export default function Article() {
   const [data, isLoading] = getPost();
 
+  if (isLoading) {
+    return <p>Loading...</p>;
+  }
+
   return (
-    <Wrapper>
-      <TopWrapper>
-        <Title
-          title={data.title}
-          image={data.author_image}
-          name={data.author_name}
-          time={data.created_at}
-        ></Title>
-        <TextWrapper>
-          <Text level={4} spacing="-0.036rem" color="#333">
-            {data.body}
-          </Text>
-        </TextWrapper>
-      </TopWrapper>
-      <BottomWrapper>
-        {data.comments.map((value, index) => (
-          <Comment
-            key={index}
-            img={value.author_image}
-            name={value.author}
-            body={value.body}
-            time={value.time}
-          ></Comment>
-        ))}
-      </BottomWrapper>
-      <Write></Write>
-    </Wrapper>
+    <>
+      {data && !isLoading && (
+        <div>
+          <Wrapper>
+            <TopWrapper>
+              <Title
+                title={data.title}
+                image={data.author_image}
+                name={data.author_name}
+                time={data.created_at}
+              ></Title>
+              <TextWrapper>
+                <Text level={4} spacing="-0.036rem" color="#333">
+                  {data.body}
+                </Text>
+              </TextWrapper>
+            </TopWrapper>
+            <BottomWrapper>
+              {data.comments.map((value, index) => (
+                <Comment
+                  key={index}
+                  img={value.author_image}
+                  name={value.author}
+                  body={value.body}
+                  time={value.time}
+                ></Comment>
+              ))}
+            </BottomWrapper>
+            <Write></Write>
+          </Wrapper>
+        </div>
+      )}
+    </>
   );
 }
 

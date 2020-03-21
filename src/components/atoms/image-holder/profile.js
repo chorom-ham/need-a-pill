@@ -9,4 +9,5 @@ export default styled.div`
   align-items: center;
   justify-content: center;
   margin-right: 0.4rem;
+  overflow: hidden;
 `;

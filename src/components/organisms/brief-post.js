@@ -7,16 +7,17 @@ import Link from "next/link";
 import { useRouter } from "next/router";
 
 export default function BriefPost(props) {
-  const { title, name, profile, time, comment, id } = props;
+  const { title, name, profile, time, comment, _id } = props;
   const router = useRouter();
+
   return (
-    <Link href={`article?category=${router.pathname}&id=${id}`}>
+    <Link href={`article?category=${router.pathname}&id=${_id}`}>
       <A>
         <Wrapper>
           <ProfileWrapper>
             <Profile name={name} image={profile}></Profile>
           </ProfileWrapper>
-          <Text level={4} spacing="-0.036rem" color="#333">
+          <Text level={4} spacing="-0.036rem" color="#333" weight={500}>
             {title}
           </Text>
           <BottomWrapper>
@@ -45,7 +46,7 @@ const Wrapper = styled.div`
 const ProfileWrapper = styled.div`
   display: flex;
   flex-direction: row;
-  margin-bottom: 0.8rem;
+  margin-bottom: 0.4rem;
 `;
 
 const BottomWrapper = styled.div`

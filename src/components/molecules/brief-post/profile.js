@@ -16,4 +16,7 @@ export default function Profile(props) {
   );
 }
 
-const Img = styled.img``;
+const Img = styled.img`
+  width: 100%;
+  height: 100%;
+`;

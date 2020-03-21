@@ -21,7 +21,9 @@ export default function Comment() {
   return (
     <Wrapper>
       <div>
-        <Profile name={state.name} image={state.profile_pic}></Profile>
+        <Profile>
+          <Img src={state.profile_pic}></Img>
+        </Profile>
       </div>
       <Form>
         <Input
@@ -61,7 +63,7 @@ const Profile = styled.div`
   margin-right: 0.8rem;
 `;
 
-const Form = styled.form`
+const Form = styled.div`
   display: flex;
   flex-direction: row;
 `;
@@ -82,3 +84,5 @@ const Submit = styled.button`
   justify-content: center;
   border: none;
 `;
+
+const Img = styled.img``;

@@ -6,7 +6,9 @@ import Text from "../../atoms/text";
 export default function commentNum(props) {
   return (
     <Wrapper>
-      <Icon style={{ width: "0.8rem", height: "0.8rem" }}></Icon>
+      <Icon
+        style={{ width: "0.8rem", height: "0.8rem", marginRight: "0.4rem" }}
+      ></Icon>
       <Text level={3} color="#999" spacing="-0.03rem">
         {props.num}
       </Text>
