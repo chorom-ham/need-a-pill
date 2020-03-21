@@ -40,7 +40,7 @@ export default function Article() {
                   img={value.author_image}
                   name={value.author}
                   body={value.body}
-                  time={value.time}
+                  time={value.created_at}
                 ></Comment>
               ))}
             </BottomWrapper>
@@ -87,7 +87,9 @@ const TextWrapper = styled.div`
   padding: 2rem 0 2rem 0;
 `;
 
-const BottomWrapper = styled.div``;
+const BottomWrapper = styled.div`
+  margin-bottom: 6rem;
+`;
 
 const Img = styled.img`
   width: 32rem;

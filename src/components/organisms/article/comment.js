@@ -38,7 +38,6 @@ const Wrapper = styled.div`
 const Row = styled.div`
   display: flex;
   flex-direction: row;
-  justify-content: space-between;
 `;
 
 const Col = styled.div`
@@ -52,9 +51,13 @@ const Profile = styled.div`
   background-color: #ececf0;
   border-radius: 1.6rem;
   margin-right: 0.8rem;
+  overflow: hidden;
 `;
 
-const Img = styled.img``;
+const Img = styled.img`
+  width: 100%;
+  height: 100%;
+`;
 
 const Bottom = styled.div`
   display: flex;
@@ -73,7 +76,8 @@ const Button = styled.button`
   align-items: center;
   justify-content: center;
   border: none;
-  margin-left: 0.4rem;
+  position: absolute;
+  right: 1.6rem;
 `;
 
 const Right = styled.div`

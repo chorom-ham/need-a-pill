@@ -10,49 +10,50 @@ export default function Comment() {
   const router = useRouter();
   const [body, setBody] = useState("");
 
-  const submit = () =>
-    (axios.post(
-      `https://needapill-server.herokuapp.com${router.query.category}/${router.query.id}/comment`
-    ),
-    { author: state.email, body: body }).catch(function(error) {
-      console.log(error);
-    });
+  const submit = () => {
+    if (state.isSignedIn) {
+      (axios.post(
+        `https://needapill-server.herokuapp.com${router.query.category}/${router.query.id}/comment`
+      ),
+      { author: state.email, body: body }).catch(function(error) {
+        console.log(error);
+      });
+      router.push(
+        `/article?category=${router.query.category}&id=${router.query.id}`
+      );
+    } else alert("You must be logged in to write.");
+  };
 
   return (
     <Wrapper>
-      <div>
-        <Profile>
-          <Img src={state.profile_pic}></Img>
-        </Profile>
-      </div>
-      <Form>
-        <Input
-          type="text"
-          placeholder="Please write down your comment."
-          onChange={e => setBody(e.target.value)}
-        ></Input>
-        <Submit onClick={submit}>
-          <Up fill="#fff" style={{ width: "0.93rem", height: "1.2rem" }}></Up>
-        </Submit>
-      </Form>
+      <Div>
+        <div>
+          <Profile>
+            <Img src={state.profile_pic}></Img>
+          </Profile>
+        </div>
+        <Form>
+          <Input
+            type="text"
+            placeholder="Please write down your comment."
+            onChange={e => setBody(e.target.value)}
+          ></Input>
+          <Submit onClick={submit}>
+            <Up fill="#fff" style={{ width: "0.93rem", height: "1.2rem" }}></Up>
+          </Submit>
+        </Form>
+      </Div>
     </Wrapper>
   );
 }
 
 const Wrapper = styled.footer`
-  margin: 1rem 2rem 1rem 2rem;
-  padding: 0.6rem 1.2rem;
-  width: 32rem;
-  height: 4rem;
-  background-color: #ececf0;
-  border-radius: 0.8rem;
   box-sizing: border-box;
-  display: flex;
-  flex-direction: row;
   align-items: center;
   justify-content: space-between;
   position: fixed;
   bottom: 0;
+  background-color: #fff;
 `;
 
 const Profile = styled.div`
@@ -89,4 +90,16 @@ const Submit = styled.button`
 const Img = styled.img`
   width: 100%;
   height: 100%;
+`;
+
+const Div = styled.div`
+  margin: 1rem 2rem 1rem 2rem;
+  padding: 0.6rem 1.2rem;
+  width: 32rem;
+  height: 4rem;
+  background-color: #ececf0;
+  border-radius: 0.8rem;
+  box-sizing: border-box;
+  display: flex;
+  flex-direction: row;
 `;
