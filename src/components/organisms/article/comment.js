@@ -25,7 +25,7 @@ export default function Comment(props) {
           <Text level={3} color="#999">
             {props.time}
           </Text>
-          {props.email === state.email && <Delete></Delete>}
+          {props.email === state.email && <Delete email={props.email}></Delete>}
         </Row>
       </Col>
     </Wrapper>
