@@ -5,7 +5,7 @@ export const initialState = {
   profile_pic: ""
 };
 
-export default function reducer(state, action) {
+export default function reducer(state = initialState, action) {
   var newState;
   switch (action.type) {
     case "IN": {
@@ -16,8 +16,7 @@ export default function reducer(state, action) {
       return initialState;
     }
     default: {
-      if (state === undefined) return initialState;
-      else return state;
+      return state;
     }
   }
 }
