@@ -49,4 +49,6 @@ const getPost = () => {
   return [data, isLoading];
 };
 
-const Img = styled.img``;
+const Img = styled.img`
+  width: 100%;
+`;
