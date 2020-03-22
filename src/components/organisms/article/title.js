@@ -2,8 +2,12 @@ import React from "react";
 import styled from "styled-components";
 import Text from "../../atoms/text";
 import Profile from "../../molecules/brief-post/profile";
+import Delete from "../../molecules/Button/delete/article";
+import { useSelector } from "react-redux";
 
 export default function Title(props) {
+  const state = useSelector(state => state.login);
+
   return (
     <Wrapper>
       <Text level={4} spacing="-0.036rem" color="#333" weight={500}>
@@ -15,7 +19,7 @@ export default function Title(props) {
           <Text level={3} color="#999">
             {props.time}
           </Text>
-          <Button>...</Button>
+          {props.email === state.email && <Delete></Delete>}
         </Right>
       </Bottom>
     </Wrapper>

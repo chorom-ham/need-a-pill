@@ -25,6 +25,7 @@ export default function Article() {
                 image={data.author_image}
                 name={data.author_name}
                 time={data.created_at}
+                email={data.author_email}
               ></Title>
               <TextWrapper>
                 <Text level={4} spacing="-0.036rem" color="#333">
@@ -55,6 +56,7 @@ export default function Article() {
                   name={value.author}
                   body={value.body}
                   time={value.created_at}
+                  email={value.author_email}
                 ></Comment>
               ))}
             </BottomWrapper>

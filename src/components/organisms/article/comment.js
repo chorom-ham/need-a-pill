@@ -1,8 +1,12 @@
 import React from "react";
 import styled from "styled-components";
 import Text from "../../atoms/text";
+import Delete from "../../molecules/Button/delete/comment";
+import { useSelector } from "react-redux";
 
 export default function Comment(props) {
+  const state = useSelector(state => state.login);
+
   return (
     <Wrapper>
       <Col>
@@ -21,7 +25,7 @@ export default function Comment(props) {
           <Text level={3} color="#999">
             {props.time}
           </Text>
-          <Button>...</Button>
+          {props.email === state.email && <Delete></Delete>}
         </Row>
       </Col>
     </Wrapper>
