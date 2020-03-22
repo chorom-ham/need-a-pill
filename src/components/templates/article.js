@@ -34,6 +34,20 @@ export default function Article() {
               </TextWrapper>
             </TopWrapper>
             <BottomWrapper>
+              <NumWrapper>
+                <Text
+                  level={4}
+                  weight={500}
+                  spacing="-0.036rem"
+                  color="#3446d4"
+                >
+                  {data.comments.length}
+                </Text>
+                &nbsp;
+                <Text level={4} weight={500} spacing="-0.036rem">
+                  {data.comments.length < 2 ? "Comment" : "Comments"}
+                </Text>
+              </NumWrapper>
               {data.comments.map((value, index) => (
                 <Comment
                   key={index}
@@ -91,7 +105,14 @@ const BottomWrapper = styled.div`
   margin-bottom: 6rem;
 `;
 
+const NumWrapper = styled.div`
+  margin: 1.2rem 0 0.4rem 0;
+  padding: 0 2rem;
+  display: flex;
+`;
+
 const Img = styled.img`
   width: 32rem;
-  margin-top: 0.4rem;
+  margin: 1.2rem 0 0.4rem 0;
+  padding: 0 2rem;
 `;
