@@ -35,7 +35,7 @@ export default function Google() {
       clientId="237635840259-cktqanlh26ui8je9bc1i22s8njtunuba.apps.googleusercontent.com"
       buttonText="Sign in"
       onSuccess={login}
-      onFailure={() => alert("Error! Try it again!")}
+      onFailure={response => console.log(response)}
       cookiePolicy={"single_host_origin"}
       isSignedIn={true}
     />
