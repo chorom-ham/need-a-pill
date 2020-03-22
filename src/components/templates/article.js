@@ -14,6 +14,8 @@ export default function Article() {
     return <p>Loading...</p>;
   }
 
+  if (data) console.log(data.comments);
+
   return (
     <>
       {data && !isLoading && (
