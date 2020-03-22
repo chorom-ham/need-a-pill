@@ -19,7 +19,7 @@ export default function deleteButton(props) {
           .catch(function(error) {
             console.log(error);
           });
-        router.push(`/article?category=${router.query.category}`);
+        router.push(`${router.query.category}`);
       } else {
         alert("You cannot delete this post.");
       }
