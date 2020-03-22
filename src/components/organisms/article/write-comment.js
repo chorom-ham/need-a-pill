@@ -11,11 +11,11 @@ export default function Comment() {
   const [body, setBody] = useState("");
 
   const submit = () => {
-    if (state.isSignedIn && state.email != "") {
+    if (state.isSignedIn && body != "") {
       axios
         .post(
           `https://needapill-server.herokuapp.com${router.query.category}/${router.query.id}/comment`,
-          { author: state.email, body: body }
+          { author_email: state.email, body: body }
         )
         .catch(function(error) {
           console.log(error);
