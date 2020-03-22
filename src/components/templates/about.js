@@ -6,7 +6,11 @@ import axios from "axios";
 
 export default function About() {
   const [data, isLoading] = getPost();
-  console.log(data);
+
+  if (isLoading) {
+    return <p>Loading...</p>;
+  }
+
   return (
     <>
       {data && !isLoading && (
