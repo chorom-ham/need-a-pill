@@ -14,14 +14,12 @@ export default function deleteButton(props) {
         axios
           .delete(
             `https://needapill-server.herokuapp.com${router.query.category}/${router.query.id}`,
-            { author_email: state.email }
+            { data: { author_email: state.email } }
           )
           .catch(function(error) {
             console.log(error);
           });
-        router.push(
-          `/article?category=${router.query.category}&id=${router.query.id}`
-        );
+        router.push(`/article?category=${router.query.category}`);
       } else {
         alert("You cannot delete this post.");
       }

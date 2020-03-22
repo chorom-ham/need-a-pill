@@ -57,6 +57,7 @@ export default function Article() {
                   body={value.body}
                   time={value.created_at}
                   email={value.author_email}
+                  id={value._id}
                 ></Comment>
               ))}
             </BottomWrapper>
