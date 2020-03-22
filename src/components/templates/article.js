@@ -115,4 +115,5 @@ const Img = styled.img`
   width: 32rem;
   margin: 1.2rem 0 0.4rem 0;
   padding: 0 2rem;
+  box-sizing: border-box;
 `;
