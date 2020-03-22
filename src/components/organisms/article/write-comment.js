@@ -12,12 +12,14 @@ export default function Comment() {
 
   const submit = () => {
     if (state.isSignedIn) {
-      (axios.post(
-        `https://needapill-server.herokuapp.com${router.query.category}/${router.query.id}/comment`
-      ),
-      { author: state.email, body: body }).catch(function(error) {
-        console.log(error);
-      });
+      axios
+        .post(
+          `https://needapill-server.herokuapp.com${router.query.category}/${router.query.id}/comment`,
+          { author: state.email, body: body }
+        )
+        .catch(function(error) {
+          console.log(error);
+        });
       router.push(
         `/article?category=${router.query.category}&id=${router.query.id}`
       );
