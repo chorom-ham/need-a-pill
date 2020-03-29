@@ -4,6 +4,9 @@ import Camera from "../../atoms/Button/icon/camera";
 import { useSelector } from "react-redux";
 import Router from "next/router";
 import axios from "axios";
+import dotenv from "dotenv";
+
+dotenv.config();
 
 export default function writeForm() {
   const [imgBase64, setImgBase64] = useState(""); // 파일 base64
@@ -13,7 +16,7 @@ export default function writeForm() {
   const postData = () => {
     if (imgBase64 != "") {
       axios
-        .post("https://needapill-server.herokuapp.com/about", {
+        .post(`${process.env.API_HOST}/about`, {
           author_email: email,
           image: imgBase64
         })

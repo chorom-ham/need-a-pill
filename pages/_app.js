@@ -9,6 +9,9 @@ import { PersistGate } from "redux-persist/integration/react";
 import configureStore from "../src/store";
 import { persistStore } from "redux-persist";
 import styled, { createGlobalStyle } from "styled-components";
+import dotenv from "dotenv";
+
+dotenv.config();
 
 const store = configureStore();
 const persistor = persistStore(store);
@@ -119,5 +122,5 @@ const BestWrapper = styled.div`
 `;
 
 export default withRedux(configureStore)(
-  withGA("UA-151446008-1", Router)(Needapill)
+  withGA(process.env.GA_APP_ID, Router)(Needapill)
 );

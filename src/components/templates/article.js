@@ -6,6 +6,9 @@ import Comment from "../organisms/article/comment";
 import Write from "../organisms/article/write-comment";
 import { useRouter } from "next/router";
 import axios from "axios";
+import dotenv from "dotenv";
+
+dotenv.config();
 
 export default function Article() {
   const [data, isLoading] = getPost();
@@ -79,7 +82,7 @@ const getPost = () => {
       setIsLoading(true);
       try {
         const result = await axios.get(
-          `https://needapill-server.herokuapp.com${router.query.category}/${router.query.id}`
+          `${process.env.API_HOST}${router.query.category}/${router.query.id}`
         );
         setData(result.data);
         setIsLoading(false);

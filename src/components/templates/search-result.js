@@ -8,6 +8,9 @@ import Filter from "../organisms/Tab/filter";
 import MedicineCard from "../organisms/medicine-card";
 import Skeleton from "../skeleton/medicine-card-skeleton";
 import axios from "axios";
+import dotenv from "dotenv";
+
+dotenv.config();
 
 export default function searchResult() {
   const [query, setQuery] = useState();
@@ -112,7 +115,7 @@ const useDrugSearchApi = (initialSearch, initialFilter, initialPageNum) => {
 
       try {
         const result = await axios(
-          `https://needapill-server.herokuapp.com/drugs/search?keyword=${search}&filter=${filter}&page_num=${pageNum}`
+          `${process.env.API_HOST}/drugs/search?keyword=${search}&filter=${filter}&page_num=${pageNum}`
         );
         setData(result.data);
         setIsLoading(false);

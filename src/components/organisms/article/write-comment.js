@@ -4,6 +4,9 @@ import Up from "../../atoms/Button/icon/comment-up";
 import { useSelector } from "react-redux";
 import axios from "axios";
 import { useRouter } from "next/router";
+import dotenv from "dotenv";
+
+dotenv.config();
 
 export default function Comment() {
   const state = useSelector(state => state.login);
@@ -14,7 +17,7 @@ export default function Comment() {
     if (state.isSignedIn && body != "") {
       axios
         .post(
-          `https://needapill-server.herokuapp.com${router.query.category}/${router.query.id}/comment`,
+          `${process.env.API_HOST}${router.query.category}/${router.query.id}/comment`,
           { author_email: state.email, body: body }
         )
         .catch(function(error) {

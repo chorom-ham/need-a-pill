@@ -3,6 +3,9 @@ import styled from "styled-components";
 import Text from "../atoms/text";
 import Post from "../atoms/image-holder/about";
 import axios from "axios";
+import dotenv from "dotenv";
+
+dotenv.config();
 
 export default function About() {
   const [data, isLoading] = getPost();
@@ -34,9 +37,7 @@ const getPost = () => {
     const fetchData = async () => {
       setIsLoading(true);
       try {
-        const result = await axios.get(
-          `https://needapill-server.herokuapp.com/about`
-        );
+        const result = await axios.get(`${process.env.API_HOST}/about`);
         setData(result.data);
         setIsLoading(false);
       } catch (error) {

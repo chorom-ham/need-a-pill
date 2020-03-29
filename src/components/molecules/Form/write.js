@@ -4,6 +4,9 @@ import Camera from "../../atoms/Button/icon/camera";
 import axios from "axios";
 import Router, { useRouter } from "next/router";
 import { useSelector } from "react-redux";
+import dotenv from "dotenv";
+
+dotenv.config();
 
 export default function writeForm() {
   const router = useRouter();
@@ -15,7 +18,7 @@ export default function writeForm() {
 
   const postData = () => {
     axios
-      .post(`https://needapill-server.herokuapp.com${router.query.category}`, {
+      .post(`${process.env.API_HOST}${router.query.category}`, {
         title: title,
         body: body,
         author_email: email,

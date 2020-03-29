@@ -3,6 +3,9 @@ import styled from "styled-components";
 import Post from "../organisms/brief-post";
 import axios from "axios";
 import { useRouter } from "next/router";
+import dotenv from "dotenv";
+
+dotenv.config();
 
 export default function postList() {
   const [data, isLoading] = getPost();
@@ -42,7 +45,7 @@ const getPost = () => {
       setIsLoading(true);
       try {
         const result = await axios.get(
-          `https://needapill-server.herokuapp.com${router.pathname}`
+          `${process.env.API_HOST}${router.pathname}`
         );
         setData(result.data);
         setIsLoading(false);

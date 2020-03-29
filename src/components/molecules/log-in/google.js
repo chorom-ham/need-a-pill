@@ -2,6 +2,9 @@ import React, { useCallback } from "react";
 import GoogleLogin from "react-google-login";
 import { useDispatch } from "react-redux";
 import axios from "axios";
+import dotenv from "dotenv";
+
+dotenv.config();
 
 export default function Google() {
   const dispatch = useDispatch();
@@ -12,7 +15,7 @@ export default function Google() {
     const _image = response.profileObj.imageUrl;
 
     axios
-      .post("https://needapill-server.herokuapp.com/user", {
+      .post(`${process.env.API_HOST}/user`, {
         name: _name,
         email: _email,
         image: _image
@@ -32,7 +35,7 @@ export default function Google() {
 
   return (
     <GoogleLogin
-      clientId="237635840259-cktqanlh26ui8je9bc1i22s8njtunuba.apps.googleusercontent.com"
+      clientId={process.env.GOOGLE_CLIENT_ID}
       buttonText="Sign in"
       onSuccess={login}
       onFailure={response => console.log(response)}

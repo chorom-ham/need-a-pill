@@ -5,6 +5,9 @@ import Text from "../atoms/text";
 import axios from "axios";
 import Link from "next/link";
 import AlphabetBox from "../molecules/Button/symptom-select/alphabet";
+import dotenv from "dotenv";
+
+dotenv.config();
 
 export default function alphabetical() {
   const [closed, setClosed] = useState(true);
@@ -95,7 +98,7 @@ const useAlphabetSymptomsSearchApi = char => {
       setIsLoading(true);
       try {
         const result = await axios(
-          `https://needapill-server.herokuapp.com/symptoms/firstchar?keyword=${char}`
+          `${process.env.API_HOST}/symptoms/firstchar?keyword=${char}`
         );
         setData(result.data);
 

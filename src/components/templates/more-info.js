@@ -7,6 +7,9 @@ import EffectsAndDosages from "../organisms/medicine-bottom-info/effects-and-dos
 import MoreInformation from "../organisms/medicine-bottom-info/more-information";
 import Skeleton from "../skeleton/more-info";
 import { useRouter } from "next/router";
+import dotenv from "dotenv";
+
+dotenv.config();
 
 export default function MoreInfo() {
   const router = useRouter();
@@ -79,7 +82,7 @@ const useDrugSearchApi = name => {
       setIsLoading(true);
       try {
         const result = await axios(
-          `https://needapill-server.herokuapp.com/drugs/search?keyword=${name}&filter=`
+          `${process.env.API_HOST}/drugs/search?keyword=${name}&filter=`
         );
         setData(result.data);
         setIsLoading(false);

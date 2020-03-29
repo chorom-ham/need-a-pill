@@ -3,6 +3,9 @@ import Button from "../../../atoms/Button/delete.js";
 import axios from "axios";
 import { useRouter } from "next/router";
 import { useSelector } from "react-redux";
+import dotenv from "dotenv";
+
+dotenv.config();
 
 export default function deleteButton(props) {
   const router = useRouter();
@@ -13,7 +16,7 @@ export default function deleteButton(props) {
       if (props.email === state.email) {
         axios
           .delete(
-            `https://needapill-server.herokuapp.com${router.query.category}/${router.query.id}`,
+            `${process.env.API_HOST}${router.query.category}/${router.query.id}`,
             { data: { author_email: state.email } }
           )
           .catch(function(error) {
