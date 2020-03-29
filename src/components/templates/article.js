@@ -93,7 +93,7 @@ const getPost = update => {
         console.error(error);
       }
     };
-    setTimeout(fetchData, 250);
+    setTimeout(fetchData, 350);
   }, [update]);
 
   return [data, isLoading];

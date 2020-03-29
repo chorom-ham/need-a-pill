@@ -53,7 +53,7 @@ const getPost = () => {
         console.error(error);
       }
     };
-    setTimeout(fetchData, 150);
+    setTimeout(fetchData, 1000);
   }, []);
 
   return [data, isLoading];
