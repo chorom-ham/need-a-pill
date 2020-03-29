@@ -108,7 +108,7 @@ const useSymptomSearchApi = (initialSearch, initialFilter, initialPageNum) => {
       setIsLoading(true);
       try {
         const result = await axios(
-          `${process.env.API_HOST}/drugs/symptom?keyword=${search}&page_num=${pageNum}`
+          `${process.env.API_HOST}/drugs/symptom?keyword=${search}&page=${pageNum}`
         );
         setData(result.data);
         setIsLoading(false);

@@ -115,7 +115,7 @@ const useDrugSearchApi = (initialSearch, initialFilter, initialPageNum) => {
 
       try {
         const result = await axios(
-          `${process.env.API_HOST}/drugs/search?keyword=${search}&filter=${filter}&page_num=${pageNum}`
+          `${process.env.API_HOST}/drugs/search?keyword=${search}&filter=${filter}&page=${pageNum}`
         );
         setData(result.data);
         setIsLoading(false);
