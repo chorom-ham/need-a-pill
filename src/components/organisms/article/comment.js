@@ -26,7 +26,12 @@ export default function Comment(props) {
             {props.time}
           </Text>
           {props.email === state.email && (
-            <Delete id={props.id} email={props.email}></Delete>
+            <Delete
+              id={props.id}
+              email={props.email}
+              update={props.update}
+              setUpdate={props.setUpdate}
+            ></Delete>
           )}
         </Row>
       </Col>

@@ -8,7 +8,7 @@ import dotenv from "dotenv";
 
 dotenv.config();
 
-export default function Comment() {
+export default function Comment(props) {
   const state = useSelector(state => state.login);
   const router = useRouter();
   const [body, setBody] = useState("");
@@ -23,9 +23,7 @@ export default function Comment() {
         .catch(function(error) {
           console.log(error);
         });
-      router.push(
-        `/article?category=${router.query.category}&id=${router.query.id}`
-      );
+      props.setUpdate(props.update + 1);
     } else alert("You must be logged in to write.");
   };
 

@@ -11,7 +11,8 @@ import dotenv from "dotenv";
 dotenv.config();
 
 export default function Article() {
-  const [data, isLoading] = getPost();
+  const [update, setUpdate] = useState(0);
+  const [data, isLoading] = getPost(update);
 
   if (isLoading) {
     return <p>Loading...</p>;
@@ -61,10 +62,12 @@ export default function Article() {
                   time={value.created_at}
                   email={value.author_email}
                   id={value._id}
+                  update={update}
+                  setUpdate={setUpdate}
                 ></Comment>
               ))}
             </BottomWrapper>
-            <Write></Write>
+            <Write update={update} setUpdate={setUpdate}></Write>
           </Wrapper>
         </div>
       )}
@@ -72,7 +75,7 @@ export default function Article() {
   );
 }
 
-const getPost = () => {
+const getPost = update => {
   const [data, setData] = useState(null);
   const [isLoading, setIsLoading] = useState(false);
   const router = useRouter();
@@ -90,8 +93,8 @@ const getPost = () => {
         console.error(error);
       }
     };
-    fetchData();
-  }, []);
+    setTimeout(fetchData, 250);
+  }, [update]);
 
   return [data, isLoading];
 };

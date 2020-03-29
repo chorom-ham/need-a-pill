@@ -24,9 +24,7 @@ export default function deleteButton(props) {
             .catch(function(error) {
               console.log(error);
             });
-          router.push(
-            `/article?category=${router.query.category}&id=${router.query.id}`
-          );
+          props.setUpdate(props.update + 1);
         } else {
           alert("You cannot delete this comment.");
         }
