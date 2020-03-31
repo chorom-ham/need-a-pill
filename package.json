@@ -19,7 +19,7 @@
     "express": "^4.17.1",
     "fs": "0.0.1-security",
     "js-cookie": "^2.2.1",
-    "next": "9.1.2",
+    "next": "9.3.2",
     "next-ga": "^2.3.4",
     "next-redux-wrapper": "^5.0.0",
     "quagga": "^0.12.1",
