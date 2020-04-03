@@ -5,16 +5,11 @@ import Router from "next/router";
 import withGA from "next-ga";
 import withRedux from "next-redux-wrapper";
 import { Provider } from "react-redux";
-import { PersistGate } from "redux-persist/integration/react";
 import configureStore from "../src/store";
-import { persistStore } from "redux-persist";
 import styled, { createGlobalStyle } from "styled-components";
 import dotenv from "dotenv";
 
 dotenv.config();
-
-const store = configureStore();
-const persistor = persistStore(store);
 
 const GlobalStyle = createGlobalStyle`
 @import url(//fonts.googleapis.com/earlyaccess/notosanskr.css);
@@ -81,20 +76,18 @@ class Needapill extends App {
     const { Component, pageProps, store } = this.props;
     return (
       <Provider store={store}>
-        <PersistGate loading={null} persistor={persistor}>
-          <GlobalStyle />
-          <Head>
-            <title>Need a Pill</title>
-            <link rel="shortcut icon" href="favicon.ico"></link>
-          </Head>
-          <BestWrapper>
-            <Grey />
-            <Wrapper>
-              <Component {...pageProps} />
-            </Wrapper>
-            <Grey />
-          </BestWrapper>
-        </PersistGate>
+        <GlobalStyle />
+        <Head>
+          <title>Need a Pill</title>
+          <link rel="shortcut icon" href="favicon.ico"></link>
+        </Head>
+        <BestWrapper>
+          <Grey />
+          <Wrapper>
+            <Component {...pageProps} />
+          </Wrapper>
+          <Grey />
+        </BestWrapper>
       </Provider>
     );
   }
