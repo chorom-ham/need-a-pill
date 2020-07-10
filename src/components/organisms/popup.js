@@ -19,13 +19,13 @@ export default function Modal() {
       position="right center"
       contentStyle={contentStyle}
     >
-      {close => (
+      {(close) => (
         <Wrapper>
           <Logo
             style={{
               width: "14.5rem",
               height: "2.85rem",
-              margin: "2.76rem 0 1.2rem 0"
+              margin: "2.76rem 0 1.2rem 0",
             }}
           ></Logo>
           <Text
@@ -43,7 +43,7 @@ export default function Modal() {
             style={{
               width: "3.6rem",
               height: "3.4rem",
-              marginBottom: "0.8rem"
+              marginBottom: "0.8rem",
             }}
           ></Ministry>
           <Text
@@ -185,7 +185,7 @@ const contentStyle = {
   border: "none",
   borderRadius: "0.8rem",
   boxShadow: "0 0.4rem 0.8rem 0 #e0dfe7",
-  backgroundColor: "#fff"
+  backgroundColor: "#fff",
 };
 
 const Wrapper = styled.div`
