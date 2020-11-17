@@ -12,7 +12,7 @@ export default function recommendedSymptoms(props) {
 
   return (
     <Wrapper>
-      <Title align="left" topRadius="0.8rem">
+      <Title align="center" topRadius="0.8rem">
         <Text
           level="4"
           weight="bold"
