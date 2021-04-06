@@ -102,20 +102,6 @@ class Needapill extends App {
             name="naver-site-verification"
             content="3ea05ed2aa4dd196b25557ca12aff0ac8a6202ae"
           />
-          <link rel="canonical" href="https://needapillkr.com/index"></link>
-          <script
-            data-ad-client="ca-pub-5202070596232358"
-            async
-            src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"
-          ></script>
-          <script
-            dangerouslySetInnerHTML={{
-              __html: `
-            var googletag = googletag || {};
-            googletag.cmd = googletag.cmd || [];
-        `,
-            }}
-          />
         </Head>
         <BestWrapper>
           <Grey />
